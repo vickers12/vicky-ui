@@ -1,0 +1,22 @@
+{
+    "name": "@vicky-ui/tokens",
+    "version": "1.0.0",
+    "type":"module",
+    "private": false,
+    "exports": {
+        "./tokens.css": "./dist/tokens.css",
+        "./fonts.css": "./dist/fonts.css"
+    },
+    "files": [
+        "dist",
+        "CHANGELOG.md",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "tsx src/style-dictionary/build.ts"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "style-dictionary": "^4.4.0"
+    }
+  }

@@ -1,0 +1,8 @@
+packages:
+  - packages/**
+
+onlyBuiltDependencies:
+  - '@bundled-es-modules/glob'
+  - '@swc/core'
+  - esbuild
+  - style-dictionary

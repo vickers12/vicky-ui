@@ -1,0 +1,97 @@
+{
+  "font": {
+    "family": {
+      "primary": "'Inter', sans-serif"
+    },
+    "size": {
+      "12": {
+        "type": "fontSize",
+        "value": 12
+      },
+      "14": {
+        "type": "fontSize",
+        "value": 14
+      },
+      "16": {
+        "type": "fontSize",
+        "value": 16
+      },
+      "18": {
+        "type": "fontSize",
+        "value": 18
+      },
+      "20": {
+        "type": "fontSize",
+        "value": 20
+      },
+      "24": {
+        "type": "fontSize",
+        "value": 24
+      },
+      "28": {
+        "type": "fontSize",
+        "value": 28
+      },
+      "32": {
+        "type": "fontSize",
+        "value": 32
+      },
+      "36": {
+        "type": "fontSize",
+        "value": 36
+      },
+      "40": {
+        "type": "fontSize",
+        "value": 40
+      },
+      "48": {
+        "type": "fontSize",
+        "value": 48
+      },
+      "60": {
+        "type": "fontSize",
+        "value": 60
+      }
+    },
+    "weight": {
+      "400": {
+        "type": "fontWeight",
+        "value": 400
+      },
+      "500": {
+        "type": "fontWeight",
+        "value": 500
+      },
+      "600": {
+        "type": "fontWeight",
+        "value": 600
+      },
+      "700": {
+        "type": "fontWeight",
+        "value": 700
+      },
+      "800": {
+        "type": "fontWeight",
+        "value": 800
+      }
+    }
+  },
+  "line-height": {
+    "1-2": {
+      "type": "lineHeight",
+      "value": 1.2000000476837158
+    },
+    "1-33": {
+      "type": "lineHeight",
+      "value": 1.3300000429153442
+    },
+    "1-43": {
+      "type": "lineHeight",
+      "value": 1.4299999475479126
+    },
+    "1-5": {
+      "type": "lineHeight",
+      "value": 1.5
+    }
+  }
+}

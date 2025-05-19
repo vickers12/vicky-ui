@@ -1,0 +1,14 @@
+{
+    "asset": {
+        "font": {
+            "Inter": {
+                "normal": {
+                    "100 900": {
+                        "value": "https://cdn.platform.workleap.com/hopper/fonts/inter/v4/InterVariable.woff2",
+                        "formats": ["woff2-variations"]
+                    }
+                }
+            }
+        }
+    }
+}

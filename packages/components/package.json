@@ -1,0 +1,38 @@
+{
+    "name": "@vicky-ui/components",
+    "version": "0.1.0",
+    "type": "module",
+    "sideEffects": [
+        "*.css"
+    ],
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "style": "dist/index.css",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./index.css": "./dist/index.css"
+    },
+    "files": [
+        "dist",
+        "src/**/*.css",
+        "CHANGELOG.md",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "tsup --config tsup.config.ts",
+        "dev": "tsup --watch --onSuccess \"echo Ready\""
+    },
+    "dependencies": {
+        "@mantine/core": "^7.17.5",
+        "@mantine/hooks": "^7.17.5"
+    },
+    "devDependencies": {
+        "react": "19.1.0",
+        "react-dom": "19.1.0"
+    }
+}
