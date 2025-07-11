@@ -1,6 +1,6 @@
 {
     "name": "vicky-ui",
-    "private": true,
+    "packageManager": "pnpm@10.13.1",
     "version": "0.0.0",
     "type": "module",
     "sideEffects": [
