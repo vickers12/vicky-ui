@@ -8,29 +8,32 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      "@": resolve(__dirname, "src"),
+    plugins: [react()],
+    resolve: {
+        alias: {
+            "@components": resolve(__dirname, "./packages/components/src"),
+            "@tokens": resolve(__dirname, "./packages/tokens/src"),
+            "@vicky-ui/test-utils": resolve(__dirname, "./test-utils"),
+            "^.+\\.module\\.css$": "/test-utils/__mocks__/styleMock.ts"
+        }
     },
-  },
-  build: {
-    lib: {
-      entry: resolve(__dirname, "src/index.ts"),
-      name: "VickyUI",
-      fileName: (format) => `vicky-ui.${format}.js`,
-      formats: ["es", "umd"],
-    },
-    rollupOptions: {
-      external: ["react", "react-dom"],
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
+    build: {
+        lib: {
+            entry: resolve(__dirname, "src/index.ts"),
+            name: "VickyUI",
+            fileName: (format) => `vicky-ui.${format}.js`,
+            formats: ["es", "umd"]
         },
-      },
-    },
-    sourcemap: true,
-    minify: "esbuild",
-  },
+        rollupOptions: {
+            external: ["react", "react-dom"],
+            output: {
+                globals: {
+                    react: "React",
+                    "react-dom": "ReactDOM"
+                }
+            }
+        },
+        sourcemap: true,
+        minify: "esbuild"
+    }
 });

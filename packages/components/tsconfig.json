@@ -1,12 +1,12 @@
 {
     "extends": "../../tsconfig.base.json",
     "compilerOptions": {
-        "outDir": "dist",
+        "emitDeclarationOnly": true,
+        "composite": true,
         "declaration": true,
-        "declarationDir": "dist",
-        "emitDeclarationOnly": false,
-        "types": ["react"]
+        "outDir": "dist",
+        "declarationDir": "dist"
     },
-    "exclude": ["dist", "node_modules"],
-    "include": ["**/*", "../../types/*"]
-  }
+    "include": ["src/**/*", "../../types/*", "../../test-utils/*"],
+    "exclude": ["dist", "node_modules"]
+}

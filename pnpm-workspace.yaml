@@ -1,8 +1,9 @@
 packages:
-  - packages/**
+    - packages/**
+    - "test-utils/**"
 
 onlyBuiltDependencies:
-  - '@bundled-es-modules/glob'
-  - '@swc/core'
-  - esbuild
-  - style-dictionary
+    - "@bundled-es-modules/glob"
+    - "@swc/core"
+    - esbuild
+    - style-dictionary

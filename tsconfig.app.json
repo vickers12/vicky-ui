@@ -1,7 +1,13 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./packages/components" },
-    { "path": "./packages/tokens" }
-  ]
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "emitDeclarationOnly": true,
+        "composite": true,
+        "paths": {
+            "@vicky-ui/components": ["./packages/components/src/index.ts"],
+            "@vicky-ui/test-utils": ["./test-utils/index.ts"]
+        }
+    },
+    "include": ["**/*", ".storybook/**/*"],
+    "exclude": ["node_modules", "dist"]
 }

@@ -2,4 +2,4 @@
 "@vicky-ui/tokens": minor
 ---
 
-Added tokens to tokens package
+Add support for publishing to npm.

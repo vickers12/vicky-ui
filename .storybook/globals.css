@@ -1,1 +1,16 @@
-@import url("@vicky-ui/tokens.css");
+@import url("@vicky-ui/tokens/tokens.css");
+@import url("@vicky-ui/tokens/fonts.css");
+
+body {
+    font-family: var(--body-md-font-family);
+    font-size: var(--body-md-font-size);
+    line-height: var(--body-md-line-height);
+    color: var(--primary-text);
+}
+
+.sbdocs-content p {
+    font-family: var(--body-sm-font-family);
+    font-size: var(--body-sm-font-size);
+    line-height: var(--body-sm-line-height);
+    color: var(--primary-text);
+}

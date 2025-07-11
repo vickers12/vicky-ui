@@ -1,4 +1,4 @@
-import { TransformedToken } from "style-dictionary";
+import type { TransformedToken } from "style-dictionary";
 
 export const formatTokens = (tokens: TransformedToken[]): [{ [t: string]: string }[]] => {
     const formatted = tokens.map((token: TransformedToken) => {

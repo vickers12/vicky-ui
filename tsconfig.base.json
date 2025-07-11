@@ -1,12 +1,24 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "jsx": "react-jsx"
-  },
-  "include": ["vite.config.ts"]
+    "compilerOptions": {
+        "baseUrl": ".",
+        "rootDir": ".",
+        "paths": {
+            "@vicky-ui/components": ["packages/components/src/index.ts"],
+            "@vicky-ui/test-utils": ["test-utils/index.ts"]
+        },
+        "target": "esnext",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "types": ["react", "vitest/globals", "@testing-library/jest-dom"],
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "jsx": "react-jsx",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "allowImportingTsExtensions": true,
+
+        "forceConsistentCasingInFileNames": true
+    }
 }

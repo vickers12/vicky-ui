@@ -1,7 +1,7 @@
 {
     "name": "@vicky-ui/tokens",
     "version": "1.0.0",
-    "type":"module",
+    "type": "module",
     "private": false,
     "exports": {
         "./tokens.css": "./dist/tokens.css",
@@ -17,6 +17,6 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "style-dictionary": "^4.4.0"
+        "style-dictionary": "^5.0.0"
     }
-  }
+}

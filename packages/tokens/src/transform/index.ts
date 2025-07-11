@@ -1,1 +1,2 @@
-export { pxToRem, isSizeType } from "./pxToRem";
+export { pxToRem, isSizeType } from "./pxToRem.ts";
+export { attributeFont } from "./attributeFont.ts";

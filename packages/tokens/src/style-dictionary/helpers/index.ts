@@ -1,1 +1,1 @@
-export { formatTokens } from "./formatTokens";
+export { formatTokens } from "./formatTokens.ts";

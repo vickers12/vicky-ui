@@ -1,9 +1,16 @@
 {
     "extends": "../../tsconfig.node.json",
     "compilerOptions": {
-      "composite": true,
-      "outDir": "build",
-      "rootDir": "src"
+        "emitDeclarationOnly": true,
+        "composite": true,
+        "declaration": true,
+        "outDir": "dist",
+        "declarationDir": "dist",
+        "types": ["react"],
+        "paths": {
+            "@vicky-ui/components": ["../components/src/index.ts"]
+        }
     },
-    "include": ["src"]
-  }
+    "include": ["src/**/*", "src/stories/datas/tokens.json", "../../types/*"],
+    "exclude": ["node_modules"]
+}

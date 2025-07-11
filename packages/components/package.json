@@ -24,14 +24,22 @@
         "README.md"
     ],
     "scripts": {
-        "build": "tsup --config tsup.config.ts",
-        "dev": "tsup --watch --onSuccess \"echo Ready\""
+        "build": "pnpm run build:types && vite build --config vite.config.ts",
+        "build:types": "tsc -p tsconfig.json",
+        "test": "vitest run"
+    },
+    "peerDependencies": {
+        "@vicky-ui/tokens": "^1.0.0",
+        "react": "^18 || ^19",
+        "react-dom": "^18 || ^19"
     },
     "dependencies": {
-        "@mantine/core": "^7.17.5",
-        "@mantine/hooks": "^7.17.5"
+        "clsx": "^2.1.1"
     },
     "devDependencies": {
+        "@types/react": "^19.1.8",
+        "@types/react-dom": "^19.1.6",
+        "@vicky-ui/tokens": "workspace:*",
         "react": "19.1.0",
         "react-dom": "19.1.0"
     }
