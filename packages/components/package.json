@@ -1,6 +1,6 @@
 {
     "name": "@vicky-ui/components",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "type": "module",
     "sideEffects": [
         "*.css"
@@ -29,7 +29,7 @@
         "test": "vitest run"
     },
     "peerDependencies": {
-        "@vicky-ui/tokens": "^1.0.0",
+        "@vicky-ui/tokens": "^1.1.0",
         "react": "^18 || ^19",
         "react-dom": "^18 || ^19"
     },
