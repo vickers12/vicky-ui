@@ -10,6 +10,8 @@
         "dev": "vite",
         "build:components": "pnpm --filter @vicky-ui/components run build",
         "build:tokens": "pnpm --filter @vicky-ui/tokens run build",
+        "build:pkg": "pnpm --filter=./packages/* run build",
+        "ci-publish": "pnpm build:pkg && changeset publish --access public --no-git-checks",
         "test": "vitest run --config vitest.unit.config.ts",
         "test:components": "pnpm --filter @vicky-ui/components run test",
         "lint": "eslint .",
