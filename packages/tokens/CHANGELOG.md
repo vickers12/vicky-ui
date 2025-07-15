@@ -1,5 +1,11 @@
 # @vicky-ui/tokens
 
+## 1.2.0
+
+### Minor Changes
+
+- a69fc8a: Added support for scss tokens file.
+
 ## 1.1.1
 
 ### Patch Changes
