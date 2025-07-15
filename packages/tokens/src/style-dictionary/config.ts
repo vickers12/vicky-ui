@@ -31,6 +31,19 @@ export const config: Config = {
                 }
             ]
         },
+        scss: {
+            transformGroup: "custom/css",
+            buildPath: "dist/",
+            files: [
+                {
+                    destination: "tokens.scss",
+                    format: "scss/variables",
+                    options: {
+                        outputReferences: true
+                    }
+                }
+            ]
+        },
         json: {
             transformGroup: "custom/css",
             buildPath: BUILD_PATH,
