@@ -7,6 +7,7 @@
     },
     "exports": {
         "./tokens.css": "./dist/tokens.css",
+        "./tokens.scss": "./dist/tokens.scss",
         "./fonts.css": "./dist/fonts.css"
     },
     "files": [
@@ -20,5 +21,6 @@
     "dependencies": {},
     "devDependencies": {
         "style-dictionary": "^5.0.0"
-    }
+    },
+    "sideEffects": false
 }
