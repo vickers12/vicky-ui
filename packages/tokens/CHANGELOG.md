@@ -1,5 +1,11 @@
 # @vicky-ui/tokens
 
+## 1.2.1
+
+### Patch Changes
+
+- a8fef8f: Fixed package.json export for tokens.scss
+
 ## 1.2.0
 
 ### Minor Changes
