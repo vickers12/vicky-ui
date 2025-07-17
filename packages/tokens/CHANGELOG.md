@@ -1,5 +1,11 @@
 # @vicky-ui/tokens
 
+## 1.2.2
+
+### Patch Changes
+
+- 17d3afa: Fixed some token names.
+
 ## 1.2.1
 
 ### Patch Changes
