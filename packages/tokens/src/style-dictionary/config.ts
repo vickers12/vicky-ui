@@ -1,5 +1,6 @@
-import type { Config } from "style-dictionary";
+import type { Config, TransformedToken } from "style-dictionary";
 
+const PREFIX = "vui";
 const BUILD_PATH = "dist/";
 const STORYBOOK_BUILD_PATH = "../src/stories";
 
@@ -14,12 +15,16 @@ const STORYBOOK_BUILD_PATH = "../src/stories";
   }
 }); */
 
+const typeFilter = (allowedTypes: string[]) => (token: TransformedToken) =>
+    allowedTypes.includes(token.type ?? "");
+
 export const config: Config = {
     source: ["src/core/**/*.tokens.json", "src/semantic/light/**/*.tokens.json"],
     platforms: {
         css: {
             transformGroup: "custom/css",
             buildPath: "dist/",
+            prefix: PREFIX,
             files: [
                 {
                     destination: "tokens.css",
@@ -34,6 +39,7 @@ export const config: Config = {
         scss: {
             transformGroup: "custom/css",
             buildPath: "dist/",
+            prefix: PREFIX,
             files: [
                 {
                     destination: "tokens.scss",
@@ -47,6 +53,7 @@ export const config: Config = {
         json: {
             transformGroup: "custom/css",
             buildPath: BUILD_PATH,
+            prefix: PREFIX,
             files: [
                 {
                     destination: "tokens.json",
@@ -61,6 +68,17 @@ export const config: Config = {
                     }
                 }
             ]
+        },
+        types: {
+            transformGroup: "custom/js",
+            buildPath: "dist/types/",
+            files: [
+                {
+                    destination: "index.d.ts",
+                    format: "custom/types",
+                    filter: typeFilter(["color", "space", "borderRadius", "boxShadow"])
+                }
+            ]
         }
     }
 };
@@ -71,6 +89,7 @@ export const fontsConfig: Config = {
         "css-font-url": {
             transforms: ["name/kebab", "attribute/cti"],
             buildPath: BUILD_PATH,
+            prefix: PREFIX,
             files: [
                 {
                     destination: "fonts.css",

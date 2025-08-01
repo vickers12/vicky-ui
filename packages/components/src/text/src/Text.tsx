@@ -1,19 +1,24 @@
 import clsx from "clsx";
 import type { FC, Ref } from "react";
-import { type CSSProperties } from "react";
 import {
     Text as RACText,
     useContextProps,
     type TextProps as RACTextProps
 } from "react-aria-components";
 
-import { ClearTextSlots, bemHelper, SlotProvider } from "../../utils/index.ts";
+import {
+    ClearTextSlots,
+    bemHelper,
+    SlotProvider,
+    type StyledSystemProps,
+    useStyledSystem
+} from "../../utils/index.ts";
 
 import { TextContext } from "./TextContext.ts";
 
-import styles from "./Text.module.css";
+import styles from "./Text.module.scss";
 
-export const GlobalTextCssSelector = "hop-Text";
+export const GlobalTextCssSelector = "vui-text";
 
 export const TEXT_SIZES = ["inherit", "xs", "sm", "md", "lg", "xl", "2xl"] as const;
 export type TextSize = (typeof TEXT_SIZES)[number];
@@ -21,7 +26,7 @@ export type TextSize = (typeof TEXT_SIZES)[number];
 export const TEXT_WEIGHTS = ["inherit", "normal", "medium", "semibold", "bold"] as const;
 export type TextWeight = (typeof TEXT_WEIGHTS)[number];
 
-export interface TextProps extends RACTextProps {
+export interface TextProps extends RACTextProps, StyledSystemProps {
     /**
      * The Typography Type Scale to use.
      * @default "md"
@@ -49,8 +54,9 @@ const Text: FC<TextProps> = ({ ref, ...props }) => {
         elementType = "span",
         ...otherProps
     } = props;
+    const { styleProps, restProps } = useStyledSystem(otherProps);
     const bemStyles = bemHelper(styles);
-    const text = bemStyles?.text;
+    const text = bemStyles?.["vui-text"];
     const sizeClass = size === "inherit" ? "inherit-size" : size;
     const weightClass = weight === "inherit" ? "inherit-weight" : weight;
     const classNames = clsx(
@@ -60,17 +66,13 @@ const Text: FC<TextProps> = ({ ref, ...props }) => {
         className
     );
 
-    const mergedStyles: CSSProperties = {
-        ...style
-    };
-
     return (
         <RACText
             ref={ref}
             elementType={elementType}
             className={classNames}
-            style={mergedStyles}
-            {...otherProps}
+            style={styleProps}
+            {...restProps}
         >
             <ClearTextSlots>
                 <SlotProvider

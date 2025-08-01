@@ -1,0 +1,143 @@
+.vui-text {
+    --font-family: var(--vui-body-md-font-family);
+    --font-size: var(--vui-body-md-font-size); // 16px
+    --font-weight: var(--vui-body-md-font-weight);
+    --line-height: var(--vui-body-md-line-height); // 24px
+
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+
+    &--medium {
+        --font-weight: var(--vui-body-md-medium-font-weight); // 500
+    }
+
+    &--semibold {
+        --font-weight: var(--vui-body-md-semi-bold-font-weight); // 600
+    }
+
+    &--bold {
+        --font-weight: var(--vui-body-md-bold-font-weight); // 700
+    }
+
+    &--xs {
+        --font-size: var(--vui-body-xs-font-size); // 12px;
+
+        &.vui-text--medium {
+            --font-weight: var(--vui-body-xs-medium-font-weight);
+        }
+
+        &.vui-text--semibold {
+            --font-weight: var(--vui-body-xs-semi-bold-font-weight);
+        }
+
+        &.vui-text--bold {
+            --font-weight: var(--vui-body-xs-bold-font-weight);
+        }
+    }
+
+    &--sm {
+        --font-size: var(--vui-body-sm-font-size); // 14px
+
+        &.vui-text--medium {
+            --font-weight: var(--vui-body-sm-medium-font-weight);
+        }
+
+        &.vui-text--semibold {
+            --font-weight: var(--vui-body-sm-semi-bold-font-weight);
+        }
+
+        &.vui-text--bold {
+            --font-weight: var(--vui-body-sm-bold-font-weight);
+        }
+    }
+
+    &--md {
+        --font-size: var(--vui-body-md-font-size); // 16px
+
+        &.vui-text--medium {
+            --font-weight: var(--vui-body-md-medium-font-weight);
+        }
+
+        &.vui-text--semibold {
+            --font-weight: var(--vui-body-md-semi-bold-font-weight);
+        }
+
+        &.vui-text--bold {
+            --font-weight: var(--vui-body-md-bold-font-weight);
+        }
+    }
+
+    &--lg {
+        --font-size: var(--vui-body-lg-font-size); // 18px
+
+        &.vui-text--medium {
+            --font-weight: var(--vui-body-lg-medium-font-weight);
+        }
+
+        &.vui-text--semibold {
+            --font-weight: var(--vui-body-lg-semi-bold-font-weight);
+        }
+
+        &.vui-text--bold {
+            --font-weight: var(--vui-body-lg-bold-font-weight);
+        }
+    }
+
+    &--xl {
+        --font-size: var(--vui-body-xl-font-size); // 24px
+
+        &.vui-text--medium {
+            --font-weight: var(--vui-body-xl-medium-font-weight);
+        }
+
+        &.vui-text--semibold {
+            --font-weight: var(--vui-body-xl-semi-bold-font-weight);
+        }
+
+        &.vui-text--bold {
+            --font-weight: var(--vui-body-xl-bold-font-weight);
+        }
+    }
+
+    &--2xl {
+        --font-size: var(--vui-body-2xl-font-size); // 28px
+
+        &.vui-text--medium {
+            --font-weight: var(--vui-body-2xl-medium-font-weight);
+        }
+
+        &.vui-text--semibold {
+            --font-weight: var(--vui-body-2xl-semi-bold-font-weight);
+        }
+
+        &.vui-text--bold {
+            --font-weight: var(--vui-body-2xl-bold-font-weight);
+        }
+    }
+
+    &--3xl {
+        --font-size: var(--vui-body-3xl-font-size); // 32px
+
+        &.vui-text--medium {
+            --font-weight: var(--vui-body-3xl-medium-font-weight);
+        }
+
+        &.vui-text--semibold {
+            --font-weight: var(--vui-body-3xl-semi-bold-font-weight);
+        }
+
+        &.vui-text--bold {
+            --font-weight: var(--vui-body-3xl-bold-font-weight);
+        }
+    }
+
+    &--inherit-size {
+        --font-size: inherit;
+    }
+
+    &--inherit-weight {
+        --font-weight: inherit;
+    }
+}

@@ -13,8 +13,7 @@ export default defineConfig({
         alias: {
             "@components": resolve(__dirname, "./packages/components/src"),
             "@tokens": resolve(__dirname, "./packages/tokens/src"),
-            "@vicky-ui/test-utils": resolve(__dirname, "./test-utils"),
-            "^.+\\.module\\.css$": "/test-utils/__mocks__/styleMock.ts"
+            "@vicky-ui/test-utils": resolve(__dirname, "./test-utils")
         }
     },
     build: {
@@ -35,5 +34,10 @@ export default defineConfig({
         },
         sourcemap: true,
         minify: "esbuild"
+    },
+    css: {
+        modules: {
+            localsConvention: "dashes"
+        }
     }
 });

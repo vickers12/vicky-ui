@@ -6,7 +6,8 @@
         "access": "public"
     },
     "sideEffects": [
-        "*.css"
+        "*.css",
+        "*.scss"
     ],
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -23,6 +24,7 @@
     "files": [
         "dist",
         "src/**/*.css",
+        "src/**/*.scss",
         "CHANGELOG.md",
         "README.md"
     ],
@@ -43,7 +45,8 @@
         "@types/react": "^19.1.8",
         "@types/react-dom": "^19.1.6",
         "@vicky-ui/tokens": "workspace:*",
-        "react": "19.1.0",
-        "react-dom": "19.1.0"
+        "react": "19.1.1",
+        "react-dom": "19.1.1",
+        "sass": "^1.89.2"
     }
 }

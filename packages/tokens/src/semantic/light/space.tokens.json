@@ -1,68 +1,68 @@
 {
-  "space": {
-    "inline-xxs": {
-      "type": "size",
-      "value": "{space.20}"
-    },
-    "inline-xs": {
-      "type": "size",
-      "value": "{space.40}"
-    },
-    "inline-sm": {
-      "type": "size",
-      "value": "{space.80}"
-    },
-    "inline-md": {
-      "type": "size",
-      "value": "{space.160}"
-    },
-    "inline-lg": {
-      "type": "size",
-      "value": "{space.240}"
-    },
-    "inline-xl": {
-      "type": "size",
-      "value": "{space.320}"
-    },
-    "inline-2xl": {
-      "type": "size",
-      "value": "{space.480}"
-    },
-    "inline-3xl": {
-      "type": "size",
-      "value": "{space.960}"
-    },
-    "stack-xxs": {
-      "type": "size",
-      "value": "{space.20}"
-    },
-    "stack-xs": {
-      "type": "size",
-      "value": "{space.40}"
-    },
-    "stack-sm": {
-      "type": "size",
-      "value": "{space.80}"
-    },
-    "stack-md": {
-      "type": "size",
-      "value": "{space.160}"
-    },
-    "stack-lg": {
-      "type": "size",
-      "value": "{space.240}"
-    },
-    "stack-xl": {
-      "type": "size",
-      "value": "{space.320}"
-    },
-    "stack-2xl": {
-      "type": "size",
-      "value": "{space.480}"
-    },
-    "stack-3xl": {
-      "type": "size",
-      "value": "{space.960}"
+    "space": {
+        "inline-xxs": {
+            "type": "space",
+            "value": "{space.20}"
+        },
+        "inline-xs": {
+            "type": "space",
+            "value": "{space.40}"
+        },
+        "inline-sm": {
+            "type": "space",
+            "value": "{space.80}"
+        },
+        "inline-md": {
+            "type": "space",
+            "value": "{space.160}"
+        },
+        "inline-lg": {
+            "type": "space",
+            "value": "{space.240}"
+        },
+        "inline-xl": {
+            "type": "space",
+            "value": "{space.320}"
+        },
+        "inline-2xl": {
+            "type": "space",
+            "value": "{space.480}"
+        },
+        "inline-3xl": {
+            "type": "space",
+            "value": "{space.960}"
+        },
+        "stack-xxs": {
+            "type": "space",
+            "value": "{space.20}"
+        },
+        "stack-xs": {
+            "type": "space",
+            "value": "{space.40}"
+        },
+        "stack-sm": {
+            "type": "space",
+            "value": "{space.80}"
+        },
+        "stack-md": {
+            "type": "space",
+            "value": "{space.160}"
+        },
+        "stack-lg": {
+            "type": "space",
+            "value": "{space.240}"
+        },
+        "stack-xl": {
+            "type": "space",
+            "value": "{space.320}"
+        },
+        "stack-2xl": {
+            "type": "space",
+            "value": "{space.480}"
+        },
+        "stack-3xl": {
+            "type": "space",
+            "value": "{space.960}"
+        }
     }
-  }
 }
