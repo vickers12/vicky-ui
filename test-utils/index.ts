@@ -1,1 +1,1 @@
-export * from "./renderWithProviders.tsx";
+export * from "./renderWithProviders";

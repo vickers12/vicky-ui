@@ -12,6 +12,7 @@ export default defineConfig({
     resolve: {
         alias: {
             "@vicky-ui/components": resolve(__dirname, "./src"),
+            "@vicky-ui/tokens": resolve(__dirname, "../tokens"),
             "@vicky-ui/test-utils": resolve(__dirname, "../../test-utils")
         }
     },

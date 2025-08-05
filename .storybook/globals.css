@@ -1,16 +1,15 @@
-@import url("@vicky-ui/tokens/tokens.css");
-@import url("@vicky-ui/tokens/fonts.css");
+@import url("@vicky-ui/components/index.css");
 
 body {
     font-family: var(--vui-body-md-font-family);
     font-size: var(--vui-body-md-font-size);
     line-height: var(--vui-body-md-line-height);
-    color: var(--vui-primary-text);
+    color: var(--vui-text-primary-default);
 }
 
 .sbdocs-content p {
     font-family: var(--vui-body-sm-font-family);
     font-size: var(--vui-body-sm-font-size);
     line-height: var(--vui-body-sm-line-height);
-    color: var(--vui-primary-text);
+    color: var(--vui-text-primary-default);
 }

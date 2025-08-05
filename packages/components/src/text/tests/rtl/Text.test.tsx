@@ -1,5 +1,5 @@
 import { render, screen } from "@vicky-ui/test-utils";
-import { Text, TextContext } from "../../index.ts";
+import { Text, TextContext } from "../../index";
 import { createRef } from "react";
 
 import styles from "../../src/Text.module.scss";

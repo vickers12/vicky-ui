@@ -6,15 +6,9 @@ import {
     type TextProps as RACTextProps
 } from "react-aria-components";
 
-import {
-    ClearTextSlots,
-    bemHelper,
-    SlotProvider,
-    type StyledSystemProps,
-    useStyledSystem
-} from "../../utils/index.ts";
+import { ClearTextSlots, bemHelper, SlotProvider } from "../../utils";
 
-import { TextContext } from "./TextContext.ts";
+import { TextContext } from "./TextContext";
 
 import styles from "./Text.module.scss";
 
@@ -26,7 +20,7 @@ export type TextSize = (typeof TEXT_SIZES)[number];
 export const TEXT_WEIGHTS = ["inherit", "normal", "medium", "semibold", "bold"] as const;
 export type TextWeight = (typeof TEXT_WEIGHTS)[number];
 
-export interface TextProps extends RACTextProps, StyledSystemProps {
+export interface TextProps extends RACTextProps {
     /**
      * The Typography Type Scale to use.
      * @default "md"
@@ -50,11 +44,9 @@ const Text: FC<TextProps> = ({ ref, ...props }) => {
         size = "md",
         weight = "regular",
         children,
-        style,
         elementType = "span",
         ...otherProps
     } = props;
-    const { styleProps, restProps } = useStyledSystem(otherProps);
     const bemStyles = bemHelper(styles);
     const text = bemStyles?.["vui-text"];
     const sizeClass = size === "inherit" ? "inherit-size" : size;
@@ -67,13 +59,7 @@ const Text: FC<TextProps> = ({ ref, ...props }) => {
     );
 
     return (
-        <RACText
-            ref={ref}
-            elementType={elementType}
-            className={classNames}
-            style={styleProps}
-            {...restProps}
-        >
+        <RACText ref={ref} elementType={elementType} className={classNames} {...otherProps}>
             <ClearTextSlots>
                 <SlotProvider
                     values={[

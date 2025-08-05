@@ -1,1 +1,1 @@
-export * from "./ui-provider/index.ts";
+export * from "./ui-provider";

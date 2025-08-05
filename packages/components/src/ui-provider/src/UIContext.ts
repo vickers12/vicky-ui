@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import type { UIProviderProps } from "./index.ts";
+import type { UIProviderProps } from "./index";
 
 export const UIContext = createContext<UIProviderProps | null>(null);
 

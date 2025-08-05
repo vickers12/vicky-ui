@@ -1,8 +1,8 @@
 // Replace your-framework with the framework you are using, e.g. react-vite, nextjs, vue3-vite, etc.
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import * as HeadingComponents from "../index.ts";
+import * as HeadingComponents from "../index";
 
-import { Heading, HEADING_LEVELS, HEADING_SIZES } from "../index.ts";
+import { Heading, HEADING_LEVELS, HEADING_SIZES } from "../index";
 
 const meta = {
     title: "Components/Heading",

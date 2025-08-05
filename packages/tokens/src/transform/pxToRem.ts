@@ -1,7 +1,7 @@
 import type { TransformedToken } from "style-dictionary";
 
 export function isSizeType(token: TransformedToken): boolean {
-    const typeOfSize = ["size", "fontSize", "borderRadius"];
+    const typeOfSize = ["size", "fontSize", "borderRadius", "space"];
 
     if (token) {
         return typeOfSize.includes(token.type ?? "");

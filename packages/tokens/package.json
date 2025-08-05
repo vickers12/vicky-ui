@@ -9,7 +9,11 @@
         "./tokens.css": "./dist/tokens.css",
         "./tokens.scss": "./dist/tokens.scss",
         "./fonts.css": "./dist/fonts.css",
-        "./types": "./dist/types/index.d.ts"
+        "./tokens.panda.json": "./dist/tokens.panda.json",
+        "./types": {
+            "import": "./dist/types/index.js",
+            "types": "./dist/types/index.d.ts"
+        }
     },
     "types": "./dist/types/index.d.ts",
     "files": [
@@ -18,7 +22,8 @@
         "README.md"
     ],
     "scripts": {
-        "build": "tsx src/style-dictionary/build.ts"
+        "build": "tsx src/style-dictionary/build.ts && pnpm run build:types",
+        "build:types": "tsc --project tsconfig.types.json"
     },
     "devDependencies": {
         "style-dictionary": "^5.0.1"

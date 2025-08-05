@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { List, type Style, type TokenType } from "./components/List.tsx";
+import { List, type Style, type TokenType } from "./components/List";
 import tokens from "./datas/tokens.json" with { type: "json" };
 
 const meta = {

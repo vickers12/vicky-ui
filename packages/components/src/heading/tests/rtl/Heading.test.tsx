@@ -1,5 +1,5 @@
 import { render, screen } from "@vicky-ui/test-utils";
-import { H1, Heading, HeadingContext } from "../../index.ts";
+import { H1, Heading, HeadingContext } from "../../index";
 import { createRef } from "react";
 
 import styles from "../../src/Heading.module.scss";

@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
 
-import { htmlElement } from "./htmlElement.tsx";
+import { htmlElement } from "./htmlElement";
 
 // Sectioning & Content sectioning
 

@@ -1,7 +1,7 @@
 {
     "extends": "../../tsconfig.base.json",
     "compilerOptions": {
-        "emitDeclarationOnly": true,
+        "emitDeclarationOnly": false,
         "composite": true,
         "declaration": true,
         "outDir": "dist",

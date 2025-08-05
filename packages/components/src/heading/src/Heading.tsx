@@ -7,9 +7,9 @@ import {
     type HeadingProps as RACHeadingProps
 } from "react-aria-components";
 
-import { ClearTextSlots, bemHelper, SlotProvider } from "../../utils/index.ts";
+import { ClearTextSlots, bemHelper, SlotProvider } from "../../utils";
 
-import { HeadingContext } from "./HeadingContext.ts";
+import { HeadingContext } from "./HeadingContext";
 
 import styles from "./Heading.module.scss";
 
