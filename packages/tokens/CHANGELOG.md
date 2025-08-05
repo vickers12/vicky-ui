@@ -1,5 +1,11 @@
 # @vicky-ui/tokens
 
+## 2.0.0
+
+### Major Changes
+
+- 39cdf25: Fixed Tokens, added roles and generated types and mappings.
+
 ## 1.2.2
 
 ### Patch Changes
