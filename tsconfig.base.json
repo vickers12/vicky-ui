@@ -4,11 +4,12 @@
         "rootDir": ".",
         "paths": {
             "@vicky-ui/components": ["packages/components/src/index.ts"],
-            "@vicky-ui/test-utils": ["test-utils/index.ts"]
+            "@vicky-ui/test-utils": ["test-utils/index.ts"],
+            "@vicky-ui/tokens/*": ["packages/tokens/dist/*"]
         },
         "target": "esnext",
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
         "types": ["react", "vitest/globals", "@testing-library/jest-dom"],
         "strict": true,
@@ -17,7 +18,6 @@
         "jsx": "react-jsx",
         "resolveJsonModule": true,
         "allowSyntheticDefaultImports": true,
-        "allowImportingTsExtensions": true,
 
         "forceConsistentCasingInFileNames": true
     }

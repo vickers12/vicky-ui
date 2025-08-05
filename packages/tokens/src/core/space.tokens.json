@@ -1,60 +1,60 @@
 {
-  "space": {
-    "0": {
-      "type": "size",
-      "value": 0
-    },
-    "10": {
-      "type": "size",
-      "value": 1
-    },
-    "20": {
-      "type": "size",
-      "value": 2
-    },
-    "40": {
-      "type": "size",
-      "value": 4
-    },
-    "80": {
-      "type": "size",
-      "value": 8
-    },
-    "160": {
-      "type": "size",
-      "value": 16
-    },
-    "240": {
-      "type": "size",
-      "value": 24
-    },
-    "320": {
-      "type": "size",
-      "value": 32
-    },
-    "400": {
-      "type": "size",
-      "value": 40
-    },
-    "480": {
-      "type": "size",
-      "value": 48
-    },
-    "640": {
-      "type": "size",
-      "value": 64
-    },
-    "800": {
-      "type": "size",
-      "value": 80
-    },
-    "960": {
-      "type": "size",
-      "value": 96
-    },
-    "1280": {
-      "type": "size",
-      "value": 128
+    "space": {
+        "0": {
+            "type": "space",
+            "value": 0
+        },
+        "10": {
+            "type": "space",
+            "value": 1
+        },
+        "20": {
+            "type": "space",
+            "value": 2
+        },
+        "40": {
+            "type": "space",
+            "value": 4
+        },
+        "80": {
+            "type": "space",
+            "value": 8
+        },
+        "160": {
+            "type": "space",
+            "value": 16
+        },
+        "240": {
+            "type": "space",
+            "value": 24
+        },
+        "320": {
+            "type": "space",
+            "value": 32
+        },
+        "400": {
+            "type": "space",
+            "value": 40
+        },
+        "480": {
+            "type": "space",
+            "value": 48
+        },
+        "640": {
+            "type": "space",
+            "value": 64
+        },
+        "800": {
+            "type": "space",
+            "value": 80
+        },
+        "960": {
+            "type": "space",
+            "value": 96
+        },
+        "1280": {
+            "type": "space",
+            "value": 128
+        }
     }
-  }
 }

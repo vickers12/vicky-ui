@@ -1,20 +1,20 @@
 {
-  "elevation": {
-    "none": {
-      "type": "shadow",
-      "value": "{shadow.none}"
-    },
-    "raised": {
-      "type": "shadow",
-      "value": "{shadow.sm}"
-    },
-    "lifted": {
-      "type": "shadow",
-      "value": "{shadow.md}"
-    },
-    "floating": {
-      "type": "shadow",
-      "value": "{shadow.lg}"
+    "elevation": {
+        "none": {
+            "type": "boxShadow",
+            "value": "{shadow.none}"
+        },
+        "raised": {
+            "type": "boxShadow",
+            "value": "{shadow.sm}"
+        },
+        "lifted": {
+            "type": "boxShadow",
+            "value": "{shadow.md}"
+        },
+        "floating": {
+            "type": "boxShadow",
+            "value": "{shadow.lg}"
+        }
     }
-  }
 }

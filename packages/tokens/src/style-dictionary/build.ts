@@ -1,8 +1,8 @@
 import type { TransformedToken } from "style-dictionary";
 import StyleDictionary from "style-dictionary";
-import { config, fontsConfig } from "./config.ts";
-import { customDoc, customJson, fontUrl } from "./format/index.ts";
-import { attributeFont, isSizeType, pxToRem } from "../transform/index.ts";
+import { config, fontsConfig } from "./config";
+import { customDoc, customJson, customTypes, fontUrl, pandaJson } from "./format";
+import { attributeFont, isSizeType, pxToRem } from "../transform";
 
 const sdTokens = new StyleDictionary(config);
 const sdFonts = new StyleDictionary(fontsConfig);
@@ -46,15 +46,35 @@ sdTokens.registerTransformGroup({
     ]
 });
 
+sdTokens.registerTransformGroup({
+    name: "custom/js",
+    transforms: ["attribute/cti", "name/kebab", "size/rem", "color/hex"]
+});
+
+sdTokens.registerTransformGroup({
+    name: "panda/js",
+    transforms: ["attribute/cti", "name/kebab", "size/rem", "color/hex", "pxToRem"]
+});
+
 sdTokens.registerFormat({
     name: "custom/json",
     format: customJson
 });
 
 sdTokens.registerFormat({
+    name: "panda/json",
+    format: pandaJson
+});
+
+sdTokens.registerFormat({
     name: "custom/doc",
     format: customDoc
 });
+
+/* sdTokens.registerFormat({
+    name: "custom/types",
+    format: customTypes
+}); */
 
 sdFonts.registerFormat({
     name: "font-url",

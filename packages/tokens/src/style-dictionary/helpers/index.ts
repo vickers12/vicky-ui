@@ -1,1 +1,2 @@
-export { formatTokens } from "./formatTokens.ts";
+export { formatTokens } from "./formatTokens";
+export { toPascalCase } from "./toPascalCase";

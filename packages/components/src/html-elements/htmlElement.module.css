@@ -1,0 +1,5 @@
+:where(.hop-HtmlElement),
+:where(.hop-HtmlElement::after),
+:where(.hop-HtmlElement::before) {
+    box-sizing: border-box;
+}

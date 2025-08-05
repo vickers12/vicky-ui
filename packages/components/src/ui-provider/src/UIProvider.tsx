@@ -1,6 +1,6 @@
 import { I18nProvider } from "react-aria-components";
 import type { FC, ComponentProps } from "react";
-import { UIContext } from "./index.ts";
+import { UIContext } from "./index";
 
 export interface UIProviderProps extends ComponentProps<typeof I18nProvider> {}
 

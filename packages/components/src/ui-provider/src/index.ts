@@ -1,2 +1,2 @@
-export * from "./UIProvider.tsx";
-export * from "./UIContext.ts";
+export * from "./UIProvider";
+export * from "./UIContext";

@@ -8,19 +8,25 @@
     "exports": {
         "./tokens.css": "./dist/tokens.css",
         "./tokens.scss": "./dist/tokens.scss",
-        "./fonts.css": "./dist/fonts.css"
+        "./fonts.css": "./dist/fonts.css",
+        "./tokens.panda.json": "./dist/tokens.panda.json",
+        "./types": {
+            "import": "./dist/types/index.js",
+            "types": "./dist/types/index.d.ts"
+        }
     },
+    "types": "./dist/types/index.d.ts",
     "files": [
         "dist",
         "CHANGELOG.md",
         "README.md"
     ],
     "scripts": {
-        "build": "tsx src/style-dictionary/build.ts"
+        "build": "tsx src/style-dictionary/build.ts && pnpm run build:types",
+        "build:types": "tsc --project tsconfig.types.json"
     },
-    "dependencies": {},
     "devDependencies": {
-        "style-dictionary": "^5.0.0"
+        "style-dictionary": "^5.0.1"
     },
     "sideEffects": false
 }

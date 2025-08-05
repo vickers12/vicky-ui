@@ -1,2 +1,2 @@
-export * from "./Text.tsx";
-export * from "./TextContext.ts";
+export * from "./Text";
+export * from "./TextContext";

@@ -1,0 +1,60 @@
+@use "sass:string";
+
+// --- Helpers ---
+@function str-replace($string, $search, $replace: "") {
+    $index: string.index($string, $search);
+
+    @if $index {
+        @return string.slice($string, 1, $index - 1) + $replace +
+            str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+// --- Token map for sizes ---
+$heading-sizes: (
+    xs: var(--vui-heading-xs-font-size),
+    // 18px
+    sm: var(--vui-heading-sm-font-size),
+    // 28px
+    md: var(--vui-heading-md-font-size),
+    // 36px
+    lg: var(--vui-heading-lg-font-size),
+    // 40px
+    xl: var(--vui-heading-xl-font-size),
+    // 48px
+    2xl: var(--vui-heading-2xl-font-size) // 60px
+);
+
+// --- Mixin ---
+@mixin generate-heading-variants($class: ".vui-heading") {
+    #{$class} {
+        // Base (md) styles
+        --font-family: var(--vui-heading-md-font-family);
+        --font-size: var(--vui-heading-md-font-size);
+        --font-weight: var(--vui-heading-md-font-weight);
+        --line-height: var(--vui-heading-md-line-height);
+
+        font-family: var(--font-family);
+        font-size: var(--font-size);
+        font-weight: var(--font-weight);
+        line-height: var(--line-height);
+
+        &--inherit {
+            --font-family: inherit;
+            --font-size: inherit;
+            --font-weight: inherit;
+            --line-height: inherit;
+        }
+
+        @each $key, $token in $heading-sizes {
+            &--#{$key} {
+                --font-size: #{$token};
+            }
+        }
+    }
+}
+
+// --- Apply mixin ---
+@include generate-heading-variants();

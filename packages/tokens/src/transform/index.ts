@@ -1,2 +1,3 @@
-export { pxToRem, isSizeType } from "./pxToRem.ts";
-export { attributeFont } from "./attributeFont.ts";
+export { pxToRem, isSizeType } from "./pxToRem";
+export { attributeFont } from "./attributeFont";
+export { flattenWithoutRole } from "./flattenWithoutRole";
