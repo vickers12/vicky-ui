@@ -1,5 +1,16 @@
 # @vicky-ui/components
 
+## 3.0.0
+
+### Minor Changes
+
+- 39cdf25: Added new components.
+
+### Patch Changes
+
+- Updated dependencies [39cdf25]
+    - @vicky-ui/tokens@2.0.0
+
 ## 2.0.0
 
 ### Patch Changes
