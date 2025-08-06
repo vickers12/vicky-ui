@@ -1,14 +1,10 @@
 import clsx from "clsx";
-import { Ref, type JSX, FC } from "react";
+import { Ref, type JSX, FC, ComponentRef } from "react";
 
 import styles from "./htmlElement.module.css";
 
-type ElementRef<T extends keyof JSX.IntrinsicElements> = T extends keyof HTMLElementTagNameMap
-    ? HTMLElementTagNameMap[T]
-    : never;
-
 export type HtmlElementProps<T extends keyof JSX.IntrinsicElements> = JSX.IntrinsicElements[T] & {
-    ref?: Ref<ElementRef<T>>;
+    ref?: Ref<ComponentRef<T>>;
 };
 
 export const GlobalHtmlElementCssSelector = "vui-HtmlElement";

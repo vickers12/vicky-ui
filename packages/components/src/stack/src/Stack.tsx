@@ -5,7 +5,7 @@ import { useContextProps } from "react-aria-components";
 import { StackContext } from "./StackContext";
 import { Flex, FlexProps } from "../../flex";
 
-export const GlobalStackCssSelector = "vui-flex";
+export const GlobalStackCssSelector = "vui-stack";
 
 export interface StackProps extends Omit<FlexProps, "direction" | "alignItems" | "justifyContent"> {
     /**

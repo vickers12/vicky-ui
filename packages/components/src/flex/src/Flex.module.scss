@@ -1,9 +1,7 @@
 .vui-flex {
     display: var(--flex-display);
-    flex-direction: var(--flex-direction);
-    flex-wrap: var(--flex-wrap);
+    flex-flow: var(--flex-direction) var(--flex-wrap);
     gap: var(--gap, var(--row-gap, 0) var(--column-gap, 0));
-    justify-content: var(--justify-content);
+    place-content: var(--align-content) var(--justify-content);
     align-items: var(--align-items);
-    align-content: var(--align-content);
 }

@@ -5,7 +5,7 @@ import { useContextProps } from "react-aria-components";
 import { InlineContext } from "./InlineContext";
 import { Flex, FlexProps } from "../../flex";
 
-export const GlobalInlineCssSelector = "vui-flex";
+export const GlobalInlineCssSelector = "vui-inline";
 
 export interface InlineProps
     extends Omit<FlexProps, "direction" | "alignItems" | "justifyContent"> {

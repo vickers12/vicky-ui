@@ -1,143 +1,129 @@
 .vui-text {
-    --font-family: var(--vui-body-md-font-family);
-    --font-size: var(--vui-body-md-font-size); // 16px
-    --font-weight: var(--vui-body-md-font-weight);
-    --line-height: var(--vui-body-md-line-height); // 24px
+    $self: &;
 
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    font-weight: var(--font-weight);
-    line-height: var(--line-height);
+    --text-font-family: var(--vui-body-md-font-family);
+    --text-font-size: var(--vui-body-md-font-size);
+    --text-font-weight: var(--vui-body-md-font-weight);
+    --text-line-height: var(--vui-body-md-line-height);
 
-    &--medium {
-        --font-weight: var(--vui-body-md-medium-font-weight); // 500
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+    font-weight: var(--text-font-weight);
+    line-height: var(--text-line-height);
+
+    &--text-medium {
+        --text-font-weight: var(--vui-body-md-medium-font-weight);
     }
 
-    &--semibold {
-        --font-weight: var(--vui-body-md-semi-bold-font-weight); // 600
+    &--text-semibold {
+        --text-font-weight: var(--vui-body-md-semi-bold-font-weight);
     }
 
-    &--bold {
-        --font-weight: var(--vui-body-md-bold-font-weight); // 700
+    &--text-bold {
+        --text-font-weight: var(--vui-body-md-bold-font-weight);
     }
 
-    &--xs {
-        --font-size: var(--vui-body-xs-font-size); // 12px;
+    &--text-xs {
+        --text-font-size: var(--vui-body-xs-font-size);
 
-        &.vui-text--medium {
-            --font-weight: var(--vui-body-xs-medium-font-weight);
+        &#{$self}--text-medium {
+            --text-font-weight: var(--vui-body-xs-medium-font-weight);
         }
 
-        &.vui-text--semibold {
-            --font-weight: var(--vui-body-xs-semi-bold-font-weight);
+        &#{$self}--text-semibold {
+            --text-font-weight: var(--vui-body-xs-semi-bold-font-weight);
         }
 
-        &.vui-text--bold {
-            --font-weight: var(--vui-body-xs-bold-font-weight);
-        }
-    }
-
-    &--sm {
-        --font-size: var(--vui-body-sm-font-size); // 14px
-
-        &.vui-text--medium {
-            --font-weight: var(--vui-body-sm-medium-font-weight);
-        }
-
-        &.vui-text--semibold {
-            --font-weight: var(--vui-body-sm-semi-bold-font-weight);
-        }
-
-        &.vui-text--bold {
-            --font-weight: var(--vui-body-sm-bold-font-weight);
+        &#{$self}--text-bold {
+            --text-font-weight: var(--vui-body-xs-bold-font-weight);
         }
     }
 
-    &--md {
-        --font-size: var(--vui-body-md-font-size); // 16px
+    &--text-sm {
+        --text-font-size: var(--vui-body-sm-font-size);
 
-        &.vui-text--medium {
-            --font-weight: var(--vui-body-md-medium-font-weight);
+        &#{$self}--text-medium {
+            --text-font-weight: var(--vui-body-sm-medium-font-weight);
         }
 
-        &.vui-text--semibold {
-            --font-weight: var(--vui-body-md-semi-bold-font-weight);
+        &#{$self}--text-semibold {
+            --text-font-weight: var(--vui-body-sm-semi-bold-font-weight);
         }
 
-        &.vui-text--bold {
-            --font-weight: var(--vui-body-md-bold-font-weight);
-        }
-    }
-
-    &--lg {
-        --font-size: var(--vui-body-lg-font-size); // 18px
-
-        &.vui-text--medium {
-            --font-weight: var(--vui-body-lg-medium-font-weight);
-        }
-
-        &.vui-text--semibold {
-            --font-weight: var(--vui-body-lg-semi-bold-font-weight);
-        }
-
-        &.vui-text--bold {
-            --font-weight: var(--vui-body-lg-bold-font-weight);
+        &#{$self}--text-bold {
+            --text-font-weight: var(--vui-body-sm-bold-font-weight);
         }
     }
 
-    &--xl {
-        --font-size: var(--vui-body-xl-font-size); // 24px
+    &--text-md {
+        --text-font-size: var(--vui-body-md-font-size);
 
-        &.vui-text--medium {
-            --font-weight: var(--vui-body-xl-medium-font-weight);
+        &#{$self}--text-medium {
+            --text-font-weight: var(--vui-body-md-medium-font-weight);
         }
 
-        &.vui-text--semibold {
-            --font-weight: var(--vui-body-xl-semi-bold-font-weight);
+        &#{$self}--text-semibold {
+            --text-font-weight: var(--vui-body-md-semi-bold-font-weight);
         }
 
-        &.vui-text--bold {
-            --font-weight: var(--vui-body-xl-bold-font-weight);
-        }
-    }
-
-    &--2xl {
-        --font-size: var(--vui-body-2xl-font-size); // 28px
-
-        &.vui-text--medium {
-            --font-weight: var(--vui-body-2xl-medium-font-weight);
-        }
-
-        &.vui-text--semibold {
-            --font-weight: var(--vui-body-2xl-semi-bold-font-weight);
-        }
-
-        &.vui-text--bold {
-            --font-weight: var(--vui-body-2xl-bold-font-weight);
+        &#{$self}--text-bold {
+            --text-font-weight: var(--vui-body-md-bold-font-weight);
         }
     }
 
-    &--3xl {
-        --font-size: var(--vui-body-3xl-font-size); // 32px
+    &--text-lg {
+        --text-font-size: var(--vui-body-lg-font-size);
 
-        &.vui-text--medium {
-            --font-weight: var(--vui-body-3xl-medium-font-weight);
+        &#{$self}--text-medium {
+            --text-font-weight: var(--vui-body-lg-medium-font-weight);
         }
 
-        &.vui-text--semibold {
-            --font-weight: var(--vui-body-3xl-semi-bold-font-weight);
+        &#{$self}--text-semibold {
+            --text-font-weight: var(--vui-body-lg-semi-bold-font-weight);
         }
 
-        &.vui-text--bold {
-            --font-weight: var(--vui-body-3xl-bold-font-weight);
+        &#{$self}--text-bold {
+            --text-font-weight: var(--vui-body-lg-bold-font-weight);
         }
     }
 
-    &--inherit-size {
-        --font-size: inherit;
+    &--text-xl {
+        --text-font-size: var(--vui-body-xl-font-size);
+
+        &#{$self}--text-medium {
+            --text-font-weight: var(--vui-body-xl-medium-font-weight);
+        }
+
+        &#{$self}--text-semibold {
+            --text-font-weight: var(--vui-body-xl-semi-bold-font-weight);
+        }
+
+        &#{$self}--text-bold {
+            --text-font-weight: var(--vui-body-xl-bold-font-weight);
+        }
     }
 
-    &--inherit-weight {
-        --font-weight: inherit;
+    &--text-2xl {
+        --text-font-size: var(--vui-body-2xl-font-size);
+
+        &#{$self}--text-medium {
+            --text-font-weight: var(--vui-body-2xl-medium-font-weight);
+        }
+
+        &#{$self}--text-semibold {
+            --text-font-weight: var(--vui-body-2xl-semi-bold-font-weight);
+        }
+
+        &#{$self}--text-bold {
+            --text-font-weight: var(--vui-body-2xl-bold-font-weight);
+        }
+    }
+
+    &--text-inherit-size {
+        --text-font-size: inherit;
+    }
+
+    &--text-inherit-weight {
+        --text-font-weight: inherit;
     }
 }

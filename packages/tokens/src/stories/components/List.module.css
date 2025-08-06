@@ -15,11 +15,12 @@
 }
 
 .list__color {
-    width: 3rem;
-    aspect-ratio: 16/9;
     display:flex;
     align-items: center;
     justify-content: center;
+
+    aspect-ratio: 16/9;
+    width: 3rem;
 }
 
 .list__value {
