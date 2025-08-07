@@ -1,5 +1,3 @@
-console.log("✅ styleMock loaded!");
-
 export default new Proxy(
     {},
     {

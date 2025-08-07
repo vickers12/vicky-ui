@@ -1,11 +1,11 @@
-import { type Dictionary } from "style-dictionary";
+import type { Dictionary } from "style-dictionary";
 
 interface TokenGroup {
     [key: string]: string | number | boolean | null | TokenGroup;
 }
 
 interface CoreReferenceMap {
-    get(key: string): string | undefined;
+    get: (key: string) => string | undefined;
 }
 
 const TYPE_TO_PANDA = {
@@ -32,10 +32,11 @@ const TYPE_TO_PATH_SEGMENT = {
 
 function filterPathSegments(type: keyof typeof TYPE_TO_PATH_SEGMENT, path: string[]): string[] {
     const skip = TYPE_TO_PATH_SEGMENT[type];
-    if (!skip) return path;
+    if (!skip) {return path;}
     // Always treat as array for simplicity
     const skipList: string[] = Array.isArray(skip) ? skip : [skip];
-    return path.filter((segment) => !skipList.includes(segment));
+
+    return path.filter(segment => !skipList.includes(segment));
 }
 
 const setNestedValue = (
@@ -62,6 +63,7 @@ function collapseTypographyPath(path: string[]) {
         // [body, sm, medium] => ["body", "sm-medium"]
         return [path[0], `${path[1]}-${path[2]}`];
     }
+
     return path;
 }
 
@@ -73,7 +75,7 @@ export const pandaJson = async ({ dictionary }: { dictionary: Dictionary }) => {
 
     const coreReferenceMap = new Map();
 
-    dictionary.allTokens.forEach((token) => {
+    dictionary.allTokens.forEach(token => {
         const type = token.type as keyof typeof TYPE_TO_PANDA;
         const pandaCat = TYPE_TO_PANDA[type];
         const filteredPath = filterPathSegments(type, token.path);
@@ -87,12 +89,13 @@ export const pandaJson = async ({ dictionary }: { dictionary: Dictionary }) => {
                 ? collapseTypographyPath(filteredPath)
                 : filteredPath;
 
-        function getPandaReference(ref: string, coreReferenceMap: CoreReferenceMap): string {
+        function getPandaReference(ref: string, CRMap: CoreReferenceMap): string {
             const match = ref.match(/^{(.+)}$/);
-            if (!match) return ref;
+            if (!match) {return ref;}
             const tokenName: string = match[1];
-            const pandaPath: string | undefined = coreReferenceMap.get(tokenName);
-            if (pandaPath) return `{${pandaPath}}`;
+            const pandaPath: string | undefined = CRMap.get(tokenName);
+            if (pandaPath) {return `{${pandaPath}}`;}
+
             return ref;
         }
 

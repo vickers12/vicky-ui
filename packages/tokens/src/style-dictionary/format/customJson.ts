@@ -1,4 +1,4 @@
-import { type Dictionary } from "style-dictionary";
+import type { Dictionary } from "style-dictionary";
 
 interface TokenGroup {
     [key: string]: string | number | boolean | null | TokenGroup;
@@ -22,7 +22,7 @@ export const customJson = async ({ dictionary }: { dictionary: Dictionary }) => 
         }
         ref[path[path.length - 1]] = value;
     };
-    dictionary.allTokens.forEach((token) => {
+    dictionary.allTokens.forEach(token => {
         if (token.filePath.includes("/core/")) {
             setNestedValue(
                 grouped.core,

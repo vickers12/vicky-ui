@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Ref, type JSX, FC, ComponentRef } from "react";
+import { ComponentRef, FC, Ref, type JSX } from "react";
 
 import styles from "./htmlElement.module.css";
 
@@ -7,7 +7,7 @@ export type HtmlElementProps<T extends keyof JSX.IntrinsicElements> = JSX.Intrin
     ref?: Ref<ComponentRef<T>>;
 };
 
-export const GlobalHtmlElementCssSelector = "vui-HtmlElement";
+export const GlobalHtmlElementCssSelector = "vui-html-element";
 export const GlobalHtmlElementSpecificCssSelector = (elementType: string) =>
     `${GlobalHtmlElementCssSelector}-${elementType}`;
 

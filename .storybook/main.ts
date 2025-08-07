@@ -15,7 +15,7 @@ const config: StorybookConfig = {
                 esModuleInterop: false
             },
             // Filter out third-party props from node_modules except lucide-react packages.
-            propFilter: (prop) =>
+            propFilter: prop =>
                 prop.parent ? !/node_modules\/(?!lucide-react)/.test(prop.parent.fileName) : true
         }
     }

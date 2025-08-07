@@ -1,7 +1,7 @@
 // vitest.unit.config.ts
-import { defineConfig, mergeConfig } from "vitest/config";
-import { loadConfigFromFile } from "vite";
 import path, { resolve } from "path";
+import { loadConfigFromFile } from "vite";
+import { defineConfig, mergeConfig } from "vitest/config";
 
 export default async () => {
     // 👇 Load the Vite config for the component package

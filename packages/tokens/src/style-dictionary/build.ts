@@ -1,8 +1,10 @@
 import type { TransformedToken } from "style-dictionary";
 import StyleDictionary from "style-dictionary";
-import { config, fontsConfig } from "./config";
-import { customDoc, customJson, customTypes, fontUrl, pandaJson } from "./format";
+
 import { attributeFont, isSizeType, pxToRem } from "../transform";
+
+import { config, fontsConfig } from "./config";
+import { customDoc, customJson, fontUrl, pandaJson } from "./format";
 
 const sdTokens = new StyleDictionary(config);
 const sdFonts = new StyleDictionary(fontsConfig);

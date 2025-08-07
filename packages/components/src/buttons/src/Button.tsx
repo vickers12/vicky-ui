@@ -1,28 +1,14 @@
-import clsx from "clsx";
 import type { FC } from "react";
-import {
-    type ButtonProps as RACButtonProps,
-    useContextProps,
-    Button as RACButton,
-    composeRenderProps,
-    DEFAULT_SLOT
-} from "react-aria-components";
+import { composeRenderProps, DEFAULT_SLOT, Button as RACButton, type ButtonProps as RACButtonProps, useContextProps } from "react-aria-components";
 
-import { ButtonContext } from "./ButtonContext";
-import { type HtmlButtonProps } from "../../html-elements/elements";
 import { useSlot } from "../../hooks";
-import {
-    bemHelper,
-    ClearProviders,
-    ClearTextSlots,
-    composeClassnameRenderProps,
-    ensureTextWrapper,
-    SlotProvider
-} from "../../utils";
+import type { HtmlButtonProps } from "../../html-elements/elements";
+import { IconContext, type IconSize } from "../../icon";
+import { TextContext } from "../../text";
+import { bemHelper, ClearTextSlots, composeClassnameRenderProps, ensureTextWrapper, SlotProvider } from "../../utils";
 
 import styles from "./Button.module.scss";
-import { IconContext, IconSize } from "../../icon";
-import { TextContext } from "../../text";
+import { ButtonContext } from "./ButtonContext";
 
 export const GlobalButtonCssSelector = "vui-button";
 
@@ -53,14 +39,7 @@ export interface ButtonProps extends Pick<HtmlButtonProps, "ref">, RACButtonProp
  */
 const Button: FC<ButtonProps> = ({ ref, ...props }) => {
     [props, ref] = useContextProps(props, ref, ButtonContext);
-    const {
-        className,
-        children: childrenProp,
-        isFluid,
-        variant = "primary",
-        size = "md",
-        ...rest
-    } = props;
+    const { className, children: childrenProp, isFluid, variant = "primary", size = "md", ...rest } = props;
 
     const [textRef, hasText] = useSlot();
     const buttonToIconSize = new Map<ButtonSize, IconSize>([
@@ -85,7 +64,7 @@ const Button: FC<ButtonProps> = ({ ref, ...props }) => {
         })
     );
 
-    const children = composeRenderProps(childrenProp, (prev) => {
+    const children = composeRenderProps(childrenProp, prev => {
         return ensureTextWrapper(prev);
     });
 
@@ -118,13 +97,8 @@ const Button: FC<ButtonProps> = ({ ref, ...props }) => {
                     ]
                 ]}
             >
-                <RACButton
-                    ref={ref}
-                    slot={props.slot || undefined}
-                    className={classNames}
-                    {...rest}
-                >
-                    {(buttonRenderProps) => {
+                <RACButton ref={ref} slot={props.slot || undefined} className={classNames} {...rest}>
+                    {buttonRenderProps => {
                         return <>{children(buttonRenderProps)}</>;
                     }}
                 </RACButton>
