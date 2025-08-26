@@ -1,10 +1,9 @@
-import type { RenderHookOptions, RenderOptions } from "@testing-library/react";
-import { render } from "@testing-library/react";
+import type { RenderHookOptions, RenderOptions, RenderResult } from "@testing-library/react";
+import { render, renderHook } from "@testing-library/react";
+import type { ReactNode } from "react";
+
 import { UIProvider } from "@vicky-ui/components";
 
-import type { RenderResult } from "@testing-library/react";
-import { renderHook } from "@testing-library/react";
-import type { ReactNode } from "react";
 
 export interface ProviderWrapperOptions {
     locale?: string;
@@ -12,6 +11,7 @@ export interface ProviderWrapperOptions {
 
 const createProviderWrapper = (options?: ProviderWrapperOptions) => {
     const { locale = "en-US" } = options || {};
+
     return function ProviderWrapper({ children }: { children: ReactNode }) {
         return <UIProvider locale={locale}>{children}</UIProvider>;
     };

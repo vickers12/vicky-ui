@@ -1,7 +1,7 @@
 import { render, screen } from "@vicky-ui/test-utils";
-import { Text, TextContext } from "../../index";
 import { createRef } from "react";
 
+import { Text, TextContext } from "../../index";
 import styles from "../../src/Text.module.scss";
 
 describe("<Text />", () => {

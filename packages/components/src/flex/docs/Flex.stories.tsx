@@ -1,8 +1,9 @@
 // Replace your-framework with the framework you are using, e.g. react-vite, nextjs, vue3-vite, etc.
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Flex } from "../src";
-import { Div } from "../../html-elements/elements";
 import type { ComponentProps } from "react";
+
+import { Div } from "../../html-elements/elements";
+import { Flex } from "../src";
 
 const meta = {
     title: "Components/Flex",
@@ -55,7 +56,7 @@ export const AlignItems = {
     ),
     args: {
         alignItems: "center",
-        columnGap: "space-inline-md"
+        columnGap: "inline-md"
     }
 } satisfies Story;
 

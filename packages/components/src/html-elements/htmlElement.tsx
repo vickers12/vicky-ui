@@ -1,17 +1,14 @@
-import clsx from "clsx";
-import { Ref, type JSX, FC } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import { clsx } from "clsx";
+import type { ComponentRef, FC, JSX, Ref } from "react";
 
 import styles from "./htmlElement.module.css";
 
-type ElementRef<T extends keyof JSX.IntrinsicElements> = T extends keyof HTMLElementTagNameMap
-    ? HTMLElementTagNameMap[T]
-    : never;
-
 export type HtmlElementProps<T extends keyof JSX.IntrinsicElements> = JSX.IntrinsicElements[T] & {
-    ref?: Ref<ElementRef<T>>;
+    ref?: Ref<ComponentRef<T>>;
 };
 
-export const GlobalHtmlElementCssSelector = "vui-HtmlElement";
+export const GlobalHtmlElementCssSelector = "vui-html-element";
 export const GlobalHtmlElementSpecificCssSelector = (elementType: string) =>
     `${GlobalHtmlElementCssSelector}-${elementType}`;
 
@@ -37,5 +34,6 @@ export function htmlElement<T extends keyof JSX.IntrinsicElements>(
             <As ref={ref} className={classNames} {...restProps} />
         );
     };
+
     return HtmlElementComponent;
 }

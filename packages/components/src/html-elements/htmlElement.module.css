@@ -1,5 +1,5 @@
-:where(.hop-HtmlElement),
-:where(.hop-HtmlElement::after),
-:where(.hop-HtmlElement::before) {
+:where(.vui-html-element),
+:where(.vui-html-element::after),
+:where(.vui-html-element::before) {
     box-sizing: border-box;
 }

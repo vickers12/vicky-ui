@@ -1,5 +1,5 @@
-import { Globals, Property } from "csstype";
-import {
+import type { Globals, Property } from "csstype";
+import type {
     BorderRadiusToken,
     BoxShadowToken,
     ColorBorderToken,
@@ -8,7 +8,7 @@ import {
     ColorToken,
     SpaceToken
 } from "packages/tokens/dist/types/index.js";
-import { CSSProperties } from "react";
+import type { CSSProperties } from "react";
 
 export type TokenOrString<T extends string> = T | (string & {});
 export type SpaceTokenType = TokenOrString<SpaceToken>;

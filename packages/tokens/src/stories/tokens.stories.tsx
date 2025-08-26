@@ -14,18 +14,18 @@ function filterByTokenType(styles: Style[], tokenType: TokenType) {
     switch (tokenType) {
         case "core":
             return styles.filter(
-                (style) =>
+                style =>
                     !style.name.includes("core") &&
                     !style.name.includes("surface") &&
                     !style.name.includes("border") &&
                     !style.name.includes("text")
             );
         case "background":
-            return styles.filter((style) => style.name.includes("surface"));
+            return styles.filter(style => style.name.includes("surface"));
         case "border":
-            return styles.filter((style) => style.name.includes("border"));
+            return styles.filter(style => style.name.includes("border"));
         case "text":
-            return styles.filter((style) => style.name.includes("text"));
+            return styles.filter(style => style.name.includes("text"));
     }
 }
 

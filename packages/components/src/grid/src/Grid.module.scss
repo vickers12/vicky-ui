@@ -1,12 +1,12 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 .vui-grid {
     display: var(--grid-display);
+    grid-auto-columns: var(--grid-auto-columns);
+    grid-auto-flow: var(--grid-auto-flow);
     grid-template-areas: var(--grid-template-areas);
     grid-template-columns: var(--grid-template-columns);
     grid-template-rows: var(--grid-template-rows);
-    grid-auto-columns: var(--grid-auto-columns);
-    grid-auto-flow: var(--grid-auto-flow);
-    justify-content: var(--justify-content);
-    align-items: var(--align-items);
-    align-content: var(--align-content);
     gap: var(--gap, var(--row-gap, 0) var(--column-gap, 0));
+    place-content: var(--align-content) var(--justify-content);
+    align-items: var(--align-items);
 }

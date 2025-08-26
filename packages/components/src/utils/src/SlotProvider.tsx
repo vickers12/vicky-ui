@@ -1,5 +1,5 @@
-import { Provider } from "react-aria-components";
 import type { ComponentProps, FunctionComponent } from "react";
+import { Provider } from "react-aria-components";
 
 export const SlotProvider = Provider;
 export type SlotProviderProps = ComponentProps<typeof SlotProvider>;

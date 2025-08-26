@@ -251,8 +251,15 @@ HtmlLabel.displayName = "HtmlLabel";
 export const HtmlTextArea = htmlElement("textarea");
 HtmlTextArea.displayName = "HtmlTextArea";
 
+/**
+ * A specialized wrapping component for HTML `svg` element that allows style props.
+ */
+export const HtmlSVG = htmlElement("svg");
+HtmlSVG.displayName = "HtmlSVG";
+
 export type HtmlButtonProps = ComponentProps<typeof HtmlButton>;
 export type HtmlFormProps = ComponentProps<typeof HtmlForm>;
 export type HtmlInputProps = ComponentProps<typeof HtmlInput>;
 export type HtmlLabelProps = ComponentProps<typeof HtmlLabel>;
 export type HtmlTextAreaProps = ComponentProps<typeof HtmlTextArea>;
+export type HtmlSVGProps = ComponentProps<typeof HtmlSVG>;

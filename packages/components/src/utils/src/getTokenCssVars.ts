@@ -1,9 +1,10 @@
-import { styledSystemToTokenMappings } from "@vicky-ui/tokens/types";
+/* import { styledSystemToTokenMappings } from "@vicky-ui/tokens/types";
 
 function getTokenVar(map: typeof Map, value: string): string | undefined {
     if (map instanceof Map && map.has(value)) {
         return `var(--vui-${map.get(value)})`;
     }
+
     return undefined;
 }
 
@@ -14,8 +15,10 @@ function getTokenVarFromSubCat(
 ): string | undefined {
     if (subCategory && map instanceof Map) {
         const roleMap = map.get(subCategory);
+
         return getTokenVar(roleMap, value);
     }
+
     return undefined;
 }
 
@@ -24,10 +27,10 @@ export function resolveTokenVar(
     category: string,
     role?: string
 ): string | undefined {
-    if (!value) return undefined;
+    if (!value) {return undefined;}
 
     const map = styledSystemToTokenMappings.get(category);
-    if (!map) return value;
+    if (!map) {return value;}
 
     // Try role-based (for color tokens)
     const tokenValue = getTokenVarFromSubCat(map, role ?? "", value);
@@ -49,3 +52,4 @@ export function resolveTokenVar(
 
     return value;
 }
+ */

@@ -2,27 +2,45 @@
     "shape": {
         "rounded-sm": {
             "type": "borderRadius",
-            "value": "{border-radius.xs}"
+            "value": "{border-radius.xs}",
+            "attributes": {
+                "category": "shape"
+            }
         },
         "rounded-md": {
             "type": "borderRadius",
-            "value": "{border-radius.sm}"
+            "value": "{border-radius.sm}",
+            "attributes": {
+                "category": "shape"
+            }
         },
         "rounded-lg": {
             "type": "borderRadius",
-            "value": "{border-radius.md}"
+            "value": "{border-radius.md}",
+            "attributes": {
+                "category": "shape"
+            }
         },
         "rounded-xl": {
             "type": "borderRadius",
-            "value": "{border-radius.lg}"
+            "value": "{border-radius.lg}",
+            "attributes": {
+                "category": "shape"
+            }
         },
         "rounded-pill": {
             "type": "borderRadius",
-            "value": "{border-radius.xl}"
+            "value": "{border-radius.xl}",
+            "attributes": {
+                "category": "shape"
+            }
         },
         "rounded-circle": {
             "type": "borderRadius",
-            "value": "{border-radius.full}"
+            "value": "{border-radius.full}",
+            "attributes": {
+                "category": "shape"
+            }
         }
     }
 }

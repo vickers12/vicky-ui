@@ -1,4 +1,3 @@
-// Replace your-framework with the framework you are using, e.g. react-vite, nextjs, vue3-vite, etc.
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Text, TEXT_SIZES, TEXT_WEIGHTS } from "../index";
@@ -20,9 +19,9 @@ export const Basic = {} satisfies Story;
  * The other sizes are based on the vicky-ui typography type scale.
  */
 export const Sizes = {
-    render: (args) => (
+    render: args => (
         <div style={{ display: "grid", gap: "0.5rem", fontSize: "1.2rem" }}>
-            {TEXT_SIZES.map((size) => (
+            {TEXT_SIZES.map(size => (
                 <Text key={size} {...args} size={size}>
                     {size.toUpperCase()} – The quick brown fox jumps over the lazy dog.
                 </Text>
@@ -37,13 +36,16 @@ export const Sizes = {
  * The other weights are based on the vicky-ui typography type scale.
  */
 export const Weights = {
-    render: (args) => (
+    render: args => (
         <div style={{ display: "grid", gap: "0.5rem", fontSize: "1.2rem" }}>
-            {TEXT_WEIGHTS.map((weight) => (
+            {TEXT_WEIGHTS.map(weight => (
                 <Text key={weight} {...args} weight={weight}>
                     {weight.toUpperCase()} – The quick brown fox jumps over the lazy dog.
                 </Text>
             ))}
         </div>
-    )
+    ),
+    args: {
+        size: "xl"
+    }
 } satisfies Story;

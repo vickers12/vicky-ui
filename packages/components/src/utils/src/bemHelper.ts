@@ -6,8 +6,8 @@ type BlockName<T extends Record<string, string>> = Extract<
         [K in keyof T]: K extends `${infer B}__${string}`
             ? B
             : K extends `${infer B}--${string}`
-              ? B
-              : K;
+                ? B
+                : K;
     }[keyof T],
     string
 >;
@@ -49,16 +49,16 @@ export function bemHelper<T extends Record<string, string>>(styles: T) {
 
                     const modKeys = modifiers
                         ? Object.entries(modifiers)
-                              .filter(([, v]) => v)
-                              .map(
-                                  ([mod]) =>
-                                      styles[
-                                          element
-                                              ? `${block}__${element}--${mod}`
-                                              : `${block}--${mod}`
-                                      ]
-                              )
-                              .filter(Boolean)
+                            .filter(([, v]) => v)
+                            .map(
+                                ([mod]) =>
+                                    styles[
+                                        element
+                                            ? `${block}__${element}--${mod}`
+                                            : `${block}--${mod}`
+                                    ]
+                            )
+                            .filter(Boolean)
                         : [];
 
                     return [baseClass, ...modKeys].join(" ");

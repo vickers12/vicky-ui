@@ -1,8 +1,9 @@
 // Replace your-framework with the framework you are using, e.g. react-vite, nextjs, vue3-vite, etc.
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { ComponentProps } from "react";
+
+import { Div, type DivProps } from "../../html-elements/elements";
 import { Grid } from "../src";
-import { Div, DivProps } from "../../html-elements/elements";
-import { ComponentProps } from "react";
 
 const meta = {
     title: "Components/Grid",
@@ -79,7 +80,7 @@ export const ColumnSpanning = {
         </Grid>
     ),
     args: {
-        gap: "space-stack-md",
+        gap: "stack-md",
         templateColumns: ["1fr", "1fr", "1fr"]
     }
 } satisfies Story;
@@ -110,7 +111,7 @@ export const FitContent = {
     args: {
         templateColumns: ["fit-content(10rem)", "fit-content(10rem)", "1fr"],
         alignItems: "center",
-        gap: "space-stack-md"
+        gap: "stack-md"
     }
 } satisfies Story;
 
@@ -125,7 +126,7 @@ export const Gap = {
     ),
     args: {
         templateColumns: ["1fr", "1fr"],
-        gap: "space-stack-md"
+        gap: "stack-md"
     }
 } satisfies Story;
 
@@ -144,7 +145,7 @@ export const Nesting = {
     ),
     args: {
         templateColumns: ["1fr", "1fr"],
-        gap: "space-stack-md"
+        gap: "stack-md"
     }
 } satisfies Story;
 
@@ -172,7 +173,7 @@ export const Repeat = {
     ),
     args: {
         templateColumns: "repeat(auto-fit, 3rem)",
-        gap: "space-stack-md"
+        gap: "stack-md"
     }
 } satisfies Story;
 

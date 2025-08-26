@@ -1,11 +1,12 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import type { FC } from "react";
 import { useContextProps } from "react-aria-components";
 
-import { InlineContext } from "./InlineContext";
-import { Flex, FlexProps } from "../../flex";
+import { Flex, type FlexProps } from "../../flex";
 
-export const GlobalInlineCssSelector = "vui-flex";
+import { InlineContext } from "./InlineContext";
+
+export const GlobalInlineCssSelector = "vui-inline";
 
 export interface InlineProps
     extends Omit<FlexProps, "direction" | "alignItems" | "justifyContent"> {
@@ -34,7 +35,7 @@ const Inline: FC<InlineProps> = ({ ref, ...props }) => {
         alignX,
         alignY = "center",
         className,
-        gap = "space-inline-md",
+        gap = "inline-md",
         wrap = true,
         reverse,
         ...rest
@@ -58,3 +59,4 @@ const Inline: FC<InlineProps> = ({ ref, ...props }) => {
 
 Inline.displayName = "Inline";
 export { Inline };
+

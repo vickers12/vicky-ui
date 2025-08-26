@@ -1,25 +1,19 @@
-import clsx from "clsx";
-import type { FC, Ref } from "react";
-import { type CSSProperties } from "react";
+import { clsx } from "clsx";
+import type { CSSProperties, FC, Ref } from "react";
 import {
     Heading as RACHeading,
     useContextProps,
     type HeadingProps as RACHeadingProps
 } from "react-aria-components";
 
-import { ClearTextSlots, bemHelper, SlotProvider } from "../../utils";
-
-import { HeadingContext } from "./HeadingContext";
+import { bemHelper, ClearTextSlots, SlotProvider } from "../../utils";
 
 import styles from "./Heading.module.scss";
+import type { HeadingSize } from "./Heading.types";
+import { HeadingContext } from "./HeadingContext";
+
 
 export const GlobalHeadingCssSelector = "vui-heading";
-
-export const HEADING_SIZES = ["inherit", "xs", "sm", "md", "lg", "xl", "2xl"] as const;
-export type HeadingSize = (typeof HEADING_SIZES)[number];
-
-export const HEADING_LEVELS = [1, 2, 3, 4, 5, 6] as const;
-export type HeadingLevel = (typeof HEADING_LEVELS)[number];
 
 export interface HeadingProps extends RACHeadingProps {
     /**

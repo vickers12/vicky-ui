@@ -1,4 +1,5 @@
 import type { ComponentProps } from "react";
+
 import styles from "./List.module.css";
 
 export interface Style {
@@ -13,7 +14,7 @@ export interface ListProps {
 }
 
 export const List = ({ listStyles, tokenType }: ListProps) => {
-    const listItems = listStyles.map((style) => {
+    const listItems = listStyles.map(style => {
         return (
             <li className={styles["list__item"]} key={style.name}>
                 <DisplayComponent

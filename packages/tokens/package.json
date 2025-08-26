@@ -26,7 +26,7 @@
         "build:types": "tsc --project tsconfig.types.json"
     },
     "devDependencies": {
-        "style-dictionary": "^5.0.1"
+        "style-dictionary": "^5.0.2"
     },
     "sideEffects": false
 }

@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import type { FC, Ref } from "react";
 import {
     Text as RACText,
@@ -6,19 +6,15 @@ import {
     type TextProps as RACTextProps
 } from "react-aria-components";
 
-import { ClearTextSlots, bemHelper, SlotProvider } from "../../utils";
-
-import { TextContext } from "./TextContext";
+import { bemHelper, ClearTextSlots, SlotProvider } from "../../utils";
 
 import styles from "./Text.module.scss";
+import type { TextSize, TextWeight } from "./Text.types";
+import { TextContext } from "./TextContext";
+
 
 export const GlobalTextCssSelector = "vui-text";
 
-export const TEXT_SIZES = ["inherit", "xs", "sm", "md", "lg", "xl", "2xl"] as const;
-export type TextSize = (typeof TEXT_SIZES)[number];
-
-export const TEXT_WEIGHTS = ["inherit", "normal", "medium", "semibold", "bold"] as const;
-export type TextWeight = (typeof TEXT_WEIGHTS)[number];
 
 export interface TextProps extends RACTextProps {
     /**

@@ -1,5 +1,6 @@
 import { render, screen } from "@vicky-ui/test-utils";
 import { createRef } from "react";
+
 import { Inline, InlineContext } from "../../src";
 
 describe("<Inline />", () => {

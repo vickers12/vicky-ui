@@ -2,67 +2,115 @@
     "space": {
         "inline-xxs": {
             "type": "space",
-            "value": "{space.20}"
+            "value": "{space.20}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "inline-xs": {
             "type": "space",
-            "value": "{space.40}"
+            "value": "{space.40}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "inline-sm": {
             "type": "space",
-            "value": "{space.80}"
+            "value": "{space.80}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "inline-md": {
             "type": "space",
-            "value": "{space.160}"
+            "value": "{space.160}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "inline-lg": {
             "type": "space",
-            "value": "{space.240}"
+            "value": "{space.240}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "inline-xl": {
             "type": "space",
-            "value": "{space.320}"
+            "value": "{space.320}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "inline-2xl": {
             "type": "space",
-            "value": "{space.480}"
+            "value": "{space.480}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "inline-3xl": {
             "type": "space",
-            "value": "{space.960}"
+            "value": "{space.960}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "stack-xxs": {
             "type": "space",
-            "value": "{space.20}"
+            "value": "{space.20}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "stack-xs": {
             "type": "space",
-            "value": "{space.40}"
+            "value": "{space.40}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "stack-sm": {
             "type": "space",
-            "value": "{space.80}"
+            "value": "{space.80}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "stack-md": {
             "type": "space",
-            "value": "{space.160}"
+            "value": "{space.160}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "stack-lg": {
             "type": "space",
-            "value": "{space.240}"
+            "value": "{space.240}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "stack-xl": {
             "type": "space",
-            "value": "{space.320}"
+            "value": "{space.320}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "stack-2xl": {
             "type": "space",
-            "value": "{space.480}"
+            "value": "{space.480}",
+            "attributes": {
+                "category": "space"
+            }
         },
         "stack-3xl": {
             "type": "space",
-            "value": "{space.960}"
+            "value": "{space.960}",
+            "attributes": {
+                "category": "space"
+            }
         }
     }
 }
