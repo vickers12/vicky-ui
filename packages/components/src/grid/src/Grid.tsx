@@ -1,15 +1,14 @@
-import clsx from "clsx";
+import { cssVar, type SpaceToken } from "@vicky-ui/tokens/types";
+import { clsx } from "clsx";
+import type { Globals, Property } from "csstype";
 import type { FC } from "react";
 import { useContextProps } from "react-aria-components";
 
-import { Div, DivProps } from "../../html-elements/elements";
-
-import { GridContext } from "./GridContext";
-import { Globals, Property } from "csstype";
-import { SpaceToken } from "@vicky-ui/tokens/types";
-import { filterUndefined, resolveTokenVar } from "../../utils";
+import { Div, type DivProps } from "../../html-elements/elements";
+import { filterUndefined } from "../../utils";
 
 import styles from "./Grid.module.scss";
+import { GridContext } from "./GridContext";
 
 export const GlobalGridCssSelector = "vui-grid";
 
@@ -151,9 +150,9 @@ const Grid: FC<GridProps> = ({ ref, ...props }) => {
         "--grid-template-rows": templateRows && gridTemplateDimensionsHandler(templateRows),
         "--grid-auto-columns": autoColumns,
         "--grid-auto-flow": autoFlow,
-        "--gap": resolveTokenVar(gap, "space"),
-        "--row-gap": resolveTokenVar(rowGap, "space"),
-        "--column-gap": resolveTokenVar(columnGap, "space"),
+        "--gap": gap ? cssVar.space(gap) : undefined,
+        "--row-gap": rowGap ? cssVar.space(rowGap) : undefined,
+        "--column-gap": columnGap ? cssVar.space(columnGap) : undefined,
         "--align-content": alignContent,
         "--align-items": alignItems,
         "--justify-content": justifyContent
@@ -169,8 +168,9 @@ const Grid: FC<GridProps> = ({ ref, ...props }) => {
 
 function gridTemplateAreasHandler(value: GridTemplateAreasValue): Property.GridTemplateAreas {
     if (value && Array.isArray(value)) {
-        return value.map((v) => `"${v}"`).join(" ");
+        return value.map(v => `"${v}"`).join(" ");
     }
+
     return value;
 }
 
@@ -178,6 +178,7 @@ function gridTemplateDimensionsHandler(value: string | Array<string>): string {
     if (value && Array.isArray(value)) {
         return value.join(" ");
     }
+
     return value;
 }
 

@@ -1,10 +1,10 @@
 import type { TransformedToken } from "style-dictionary";
 import StyleDictionary from "style-dictionary";
 
-import { attributeFont, isSizeType, pxToRem } from "../transform";
+import { attributeFont, isSizeType, pxToRem, stripDefault } from "../transform";
 
 import { config, fontsConfig } from "./config";
-import { customDoc, customJson, fontUrl, pandaJson } from "./format";
+import { customDoc, customJson, fontUrl, pandaJson, tokenVars } from "./format";
 
 const sdTokens = new StyleDictionary(config);
 const sdFonts = new StyleDictionary(fontsConfig);
@@ -12,6 +12,16 @@ const sdFonts = new StyleDictionary(fontsConfig);
 sdTokens.registerFilter({
     name: "colors",
     filter: (token: TransformedToken): boolean => token.type === "color"
+});
+
+sdTokens.registerFilter({
+    name: "vui/not-core",
+    filter: (token: TransformedToken): boolean => !token.attributes?.core
+});
+
+sdTokens.registerFilter({
+    name: "vui/only-core",
+    filter: (token: TransformedToken): boolean => !!token.attributes?.core
 });
 
 sdTokens.registerTransform({
@@ -27,11 +37,18 @@ sdTokens.registerTransform({
     transform: attributeFont
 });
 
+sdTokens.registerTransform({
+    name: "name/strip-default-suffix",
+    type: "name",
+    transform: stripDefault
+});
+
 sdTokens.registerTransformGroup({
     name: "custom/css",
     transforms: [
         "attribute/cti",
         "name/kebab",
+        "name/strip-default-suffix",
         "time/seconds",
         "html/icon",
         "color/css",
@@ -73,10 +90,10 @@ sdTokens.registerFormat({
     format: customDoc
 });
 
-/* sdTokens.registerFormat({
-    name: "custom/types",
-    format: customTypes
-}); */
+sdTokens.registerFormat({
+    name: "custom/mappings",
+    format: tokenVars
+});
 
 sdFonts.registerFormat({
     name: "font-url",

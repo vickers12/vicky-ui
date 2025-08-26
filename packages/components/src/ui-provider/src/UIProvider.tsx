@@ -1,10 +1,11 @@
-import { I18nProvider } from "react-aria-components";
 import type { FC, ComponentProps } from "react";
+import { I18nProvider } from "react-aria-components";
+
 import { UIContext } from "./index";
 
 export interface UIProviderProps extends ComponentProps<typeof I18nProvider> {}
 
-const UIProvider: FC<UIProviderProps> = (props) => {
+const UIProvider: FC<UIProviderProps> = props => {
     const { children, locale } = props;
 
     return (

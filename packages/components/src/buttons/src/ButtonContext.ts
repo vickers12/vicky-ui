@@ -1,7 +1,7 @@
 import { createContext } from "react";
+import type { ContextValue } from "react-aria-components";
 
 import type { ButtonProps } from "./Button";
-import type { ContextValue } from "react-aria-components";
 
 export const ButtonContext = createContext<ContextValue<Partial<ButtonProps>, HTMLButtonElement>>(
     {}

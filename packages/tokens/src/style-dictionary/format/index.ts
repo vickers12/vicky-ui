@@ -1,5 +1,6 @@
-export { customJson } from "./customJson";
 export { customDoc } from "./customDoc";
-export { customTypes } from "./customTypes";
+export { customJson } from "./customJson";
 export { fontUrl } from "./fontUrl";
 export { pandaJson } from "./pandaJson";
+export { tokenVars } from "./tokenVars";
+

@@ -1,11 +1,12 @@
-import { FC } from "react";
+import { clsx } from "clsx";
 import type { LucideIcon, LucideProps } from "lucide-react";
-import { IconContext } from "./IconContext";
-import { SlotProps, useContextProps } from "react-aria-components";
+import type { FC } from "react";
+import { type SlotProps, useContextProps } from "react-aria-components";
+
+import type { HtmlSVGProps } from "../../html-elements/elements";
 
 import styles from "./Icon.module.scss";
-import clsx from "clsx";
-import { HtmlSVGProps } from "../../html-elements/elements";
+import { IconContext } from "./IconContext";
 
 export const GlobalIconCssSelector = "vui-icon";
 
@@ -54,3 +55,4 @@ const Icon: FC<IconProps> = ({ ref, ...props }: IconProps) => {
 };
 Icon.displayName = "Icon";
 export { Icon };
+

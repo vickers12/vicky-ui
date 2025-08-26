@@ -2,27 +2,45 @@
     "border-radius": {
         "xs": {
             "type": "borderRadius",
-            "value": 4
+            "value": 4,
+            "attributes": {
+                "category": "border-radius"
+            }
         },
         "sm": {
             "type": "borderRadius",
-            "value": 8
+            "value": 8,
+            "attributes": {
+                "category": "border-radius"
+            }
         },
         "md": {
             "type": "borderRadius",
-            "value": 16
+            "value": 16,
+            "attributes": {
+                "category": "border-radius"
+            }
         },
         "lg": {
             "type": "borderRadius",
-            "value": 20
+            "value": 20,
+            "attributes": {
+                "category": "border-radius"
+            }
         },
         "xl": {
             "type": "borderRadius",
-            "value": 24
+            "value": 24,
+            "attributes": {
+                "category": "border-radius"
+            }
         },
         "full": {
             "type": "borderRadius",
-            "value": 9999
+            "value": 9999,
+            "attributes": {
+                "category": "border-radius"
+            }
         }
     }
 }

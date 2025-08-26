@@ -1,9 +1,10 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import type { FC } from "react";
 import { useContextProps } from "react-aria-components";
 
+import { Flex, type FlexProps } from "../../flex";
+
 import { InlineContext } from "./InlineContext";
-import { Flex, FlexProps } from "../../flex";
 
 export const GlobalInlineCssSelector = "vui-inline";
 
@@ -34,7 +35,7 @@ const Inline: FC<InlineProps> = ({ ref, ...props }) => {
         alignX,
         alignY = "center",
         className,
-        gap = "space-inline-md",
+        gap = "inline-md",
         wrap = true,
         reverse,
         ...rest
@@ -58,3 +59,4 @@ const Inline: FC<InlineProps> = ({ ref, ...props }) => {
 
 Inline.displayName = "Inline";
 export { Inline };
+

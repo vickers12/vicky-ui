@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+
 import { Text } from "../../text";
 
 import { isTextOnlyChildren } from "./isTextOnlyChildren";

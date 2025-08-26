@@ -1,7 +1,8 @@
 import { render, screen } from "@vicky-ui/test-utils";
-import { createRef } from "react";
-import { Icon, IconContext } from "../../src";
 import { User } from "lucide-react";
+import { createRef } from "react";
+
+import { Icon, IconContext } from "../../src";
 
 describe("<Icon />", () => {
     it("renders with default props", () => {

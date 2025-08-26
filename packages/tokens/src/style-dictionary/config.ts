@@ -1,22 +1,8 @@
-import type { Config /* , TransformedToken */ } from "style-dictionary";
+import type { Config } from "style-dictionary";
 
 const PREFIX = "vui";
 const BUILD_PATH = "dist/";
 const STORYBOOK_BUILD_PATH = "../src/stories";
-
-/* StyleDictionary.registerTransform({
-  name: 'name/vc-semantic-clean',
-  type: 'name',
-  transform: (token) => {
-    const parts = token.path;
-    const isSemantic = parts[0] === 'semantic';
-    const nameParts = isSemantic ? parts.slice(2) : parts.slice(1);
-    return `vc-${nameParts.join('-')}`.toLowerCase();
-  }
-}); */
-
-/* const typeFilter = (allowedTypes: string[]) => (token: TransformedToken) =>
-    allowedTypes.includes(token.type ?? ""); */
 
 export const config: Config = {
     source: ["src/core/**/*.tokens.json", "src/semantic/light/**/*.tokens.json"],
@@ -81,19 +67,12 @@ export const config: Config = {
                     }
                 }
             ]
-        }
-        /* ,
-        types: {
-            transformGroup: "custom/js",
+        },
+        ts: {
+            transformGroup: "custom/css",
             buildPath: "src/types/",
-            files: [
-                {
-                    destination: "index.ts",
-                    format: "custom/types",
-                    filter: typeFilter(["color", "space", "borderRadius", "boxShadow"])
-                }
-            ]
-        } */
+            files: [{ destination: "index.ts", format: "custom/mappings", filter: "vui/not-core" }]
+        }
     }
 };
 

@@ -1,9 +1,10 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import type { FC } from "react";
 import { useContextProps } from "react-aria-components";
 
+import { Flex, type FlexProps } from "../../flex";
+
 import { StackContext } from "./StackContext";
-import { Flex, FlexProps } from "../../flex";
 
 export const GlobalStackCssSelector = "vui-stack";
 
@@ -33,7 +34,7 @@ const Stack: FC<StackProps> = ({ ref, ...props }) => {
         alignX,
         alignY = "center",
         className,
-        gap = "space-stack-md",
+        gap = "stack-md",
         reverse,
         ...rest
     } = props;
@@ -55,3 +56,4 @@ const Stack: FC<StackProps> = ({ ref, ...props }) => {
 
 Stack.displayName = "Stack";
 export { Stack };
+

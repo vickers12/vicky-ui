@@ -3,98 +3,182 @@
         "family": {
             "primary": {
                 "type": "fontFamily",
-                "value": "'Inter', sans-serif"
+                "value": "'Inter', sans-serif",
+                "attributes": {
+                    "category": "font",
+                    "role": "family"
+                }
             }
         },
         "size": {
             "12": {
                 "type": "fontSize",
-                "value": 12
+                "value": 12,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             },
             "14": {
                 "type": "fontSize",
-                "value": 14
+                "value": 14,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             },
             "16": {
                 "type": "fontSize",
-                "value": 16
+                "value": 16,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             },
             "18": {
                 "type": "fontSize",
-                "value": 18
+                "value": 18,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             },
             "20": {
                 "type": "fontSize",
-                "value": 20
+                "value": 20,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             },
             "24": {
                 "type": "fontSize",
-                "value": 24
+                "value": 24,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             },
             "28": {
                 "type": "fontSize",
-                "value": 28
+                "value": 28,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             },
             "32": {
                 "type": "fontSize",
-                "value": 32
+                "value": 32,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             },
             "36": {
                 "type": "fontSize",
-                "value": 36
+                "value": 36,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             },
             "40": {
                 "type": "fontSize",
-                "value": 40
+                "value": 40,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             },
             "48": {
                 "type": "fontSize",
-                "value": 48
+                "value": 48,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             },
             "60": {
                 "type": "fontSize",
-                "value": 60
+                "value": 60,
+                "attributes": {
+                    "category": "font",
+                    "role": "size"
+                }
             }
         },
         "weight": {
             "400": {
                 "type": "fontWeight",
-                "value": 400
+                "value": 400,
+                "attributes": {
+                    "category": "font",
+                    "role": "weight"
+                }
             },
             "500": {
                 "type": "fontWeight",
-                "value": 500
+                "value": 500,
+                "attributes": {
+                    "category": "font",
+                    "role": "weight"
+                }
             },
             "600": {
                 "type": "fontWeight",
-                "value": 600
+                "value": 600,
+                "attributes": {
+                    "category": "font",
+                    "role": "weight"
+                }
             },
             "700": {
                 "type": "fontWeight",
-                "value": 700
+                "value": 700,
+                "attributes": {
+                    "category": "font",
+                    "role": "weight"
+                }
             },
             "800": {
                 "type": "fontWeight",
-                "value": 800
+                "value": 800,
+                "attributes": {
+                    "category": "font",
+                    "role": "weight"
+                }
             }
         }
     },
     "line-height": {
         "1-2": {
             "type": "lineHeight",
-            "value": 1.2000000476837158
+            "value": 1.2000000476837158,
+            "attributes": {
+                "category": "line-height"
+            }
         },
         "1-33": {
             "type": "lineHeight",
-            "value": 1.3300000429153442
+            "value": 1.3300000429153442,
+            "attributes": {
+                "category": "line-height"
+            }
         },
         "1-43": {
             "type": "lineHeight",
-            "value": 1.4299999475479126
+            "value": 1.4299999475479126,
+            "attributes": {
+                "category": "line-height"
+            }
         },
         "1-5": {
             "type": "lineHeight",
-            "value": 1.5
+            "value": 1.5,
+            "attributes": {
+                "category": "line-height"
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
-import clsx from "clsx";
-import { ComponentRef, FC, Ref, type JSX } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import { clsx } from "clsx";
+import type { ComponentRef, FC, JSX, Ref } from "react";
 
 import styles from "./htmlElement.module.css";
 
@@ -33,5 +34,6 @@ export function htmlElement<T extends keyof JSX.IntrinsicElements>(
             <As ref={ref} className={classNames} {...restProps} />
         );
     };
+
     return HtmlElementComponent;
 }

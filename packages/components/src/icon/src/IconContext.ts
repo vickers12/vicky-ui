@@ -1,7 +1,7 @@
 import { createContext } from "react";
+import type { ContextValue } from "react-aria-components";
 
 import type { IconProps } from "./Icon";
-import type { ContextValue } from "react-aria-components";
 
 export const IconContext = createContext<ContextValue<Partial<IconProps>, SVGSVGElement>>({});
 

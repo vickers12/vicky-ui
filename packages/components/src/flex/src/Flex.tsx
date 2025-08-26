@@ -1,15 +1,14 @@
-import clsx from "clsx";
+import { cssVar, type SpaceToken } from "@vicky-ui/tokens/types";
+import { clsx } from "clsx";
+import type { Property } from "csstype";
 import type { FC } from "react";
 import { useContextProps } from "react-aria-components";
-import { SpaceToken } from "@vicky-ui/tokens/types";
 
-import { Div, DivProps } from "../../html-elements/elements";
-
-import { FlexContext } from "./FlexContext";
-import { Property } from "csstype";
+import { Div, type DivProps } from "../../html-elements/elements";
 
 import styles from "./Flex.module.scss";
-import { resolveTokenVar } from "../../utils";
+import { FlexContext } from "./FlexContext";
+
 
 export const GlobalFlexCssSelector = "vui-flex";
 
@@ -154,9 +153,9 @@ const Flex: FC<FlexProps> = ({ ref, ...props }) => {
         "--align-items": flexAlignValue(alignItems),
         "--justify-content": justifyContent,
         "--align-content": alignContent,
-        "--gap": resolveTokenVar(gap, "space"),
-        "--row-gap": resolveTokenVar(rowGap, "space"),
-        "--column-gap": resolveTokenVar(columnGap, "space")
+        "--gap": gap ? cssVar.space(gap) : undefined,
+        "--row-gap": rowGap ? cssVar.space(rowGap) : undefined,
+        "--column-gap": columnGap ? cssVar.space(columnGap) : undefined
     };
 
     const style = {

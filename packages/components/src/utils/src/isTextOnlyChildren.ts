@@ -9,7 +9,7 @@ export function isTextOnlyChildren(children: ReactNode) {
 
     return (
         typeof resolvedChildren === "string" ||
-        Children.toArray(resolvedChildren).every((c) => !isValidElement(c))
+        Children.toArray(resolvedChildren).every(c => !isValidElement(c))
     );
 }
 

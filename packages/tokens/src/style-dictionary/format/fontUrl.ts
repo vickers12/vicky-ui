@@ -4,7 +4,7 @@ export const fontUrl: FormatFn = async ({ dictionary }) => {
     const tokens = dictionary.allTokens;
 
     const fontImport = tokens.find(
-        (p) =>
+        p =>
             p.path.includes("asset") &&
             p.path.includes("font") &&
             p.path.includes("googleImportUrl")

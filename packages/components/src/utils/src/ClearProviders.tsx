@@ -1,11 +1,12 @@
 import type { Context, ReactNode } from "react";
-import { type ContextValue } from "react-aria-components";
+import type { ContextValue } from "react-aria-components";
 
 export interface ClearProvidersProps {
     /**
      * The list of providers to clear.
      */
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     values: Context<ContextValue<any, any>>[];
 
     children: ReactNode;

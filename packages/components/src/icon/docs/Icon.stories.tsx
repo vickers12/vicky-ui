@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { User } from "lucide-react";
+
 import { Icon } from "../src";
 
-import { User } from "lucide-react";
 
 const meta = {
     title: "Components/Icon",

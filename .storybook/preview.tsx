@@ -1,4 +1,3 @@
-import type { Preview } from "@storybook/react-vite";
 import {
     Controls,
     Description,
@@ -7,6 +6,7 @@ import {
     Subtitle,
     Title
 } from "@storybook/addon-docs/blocks";
+import type { Preview } from "@storybook/react-vite";
 
 import "./globals.css";
 

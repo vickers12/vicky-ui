@@ -2,59 +2,101 @@
     "space": {
         "0": {
             "type": "space",
-            "value": 0
+            "value": 0,
+            "attributes": {
+                "category": "space"
+            }
         },
         "10": {
             "type": "space",
-            "value": 1
+            "value": 1,
+            "attributes": {
+                "category": "space"
+            }
         },
         "20": {
             "type": "space",
-            "value": 2
+            "value": 2,
+            "attributes": {
+                "category": "space"
+            }
         },
         "40": {
             "type": "space",
-            "value": 4
+            "value": 4,
+            "attributes": {
+                "category": "space"
+            }
         },
         "80": {
             "type": "space",
-            "value": 8
+            "value": 8,
+            "attributes": {
+                "category": "space"
+            }
         },
         "160": {
             "type": "space",
-            "value": 16
+            "value": 16,
+            "attributes": {
+                "category": "space"
+            }
         },
         "240": {
             "type": "space",
-            "value": 24
+            "value": 24,
+            "attributes": {
+                "category": "space"
+            }
         },
         "320": {
             "type": "space",
-            "value": 32
+            "value": 32,
+            "attributes": {
+                "category": "space"
+            }
         },
         "400": {
             "type": "space",
-            "value": 40
+            "value": 40,
+            "attributes": {
+                "category": "space"
+            }
         },
         "480": {
             "type": "space",
-            "value": 48
+            "value": 48,
+            "attributes": {
+                "category": "space"
+            }
         },
         "640": {
             "type": "space",
-            "value": 64
+            "value": 64,
+            "attributes": {
+                "category": "space"
+            }
         },
         "800": {
             "type": "space",
-            "value": 80
+            "value": 80,
+            "attributes": {
+                "category": "space"
+            }
         },
         "960": {
             "type": "space",
-            "value": 96
+            "value": 96,
+            "attributes": {
+                "category": "space"
+            }
         },
         "1280": {
             "type": "space",
-            "value": 128
+            "value": 128,
+            "attributes": {
+                "category": "space"
+            }
         }
     }
 }

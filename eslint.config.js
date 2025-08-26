@@ -10,23 +10,23 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 
 const sourceFiles = [
-    "*.[jt]s?(x)",
-    "*.[cm]js"
+    "**/*.[jt]s?(x)",
+    "**/*.[cm]js"
 ];
 
 const typescriptFiles = [
-    "*.ts?(x)"
+    "**/*.ts?(x)"
 ];
 
 const reactTestFiles = [
-    "*.test.[jt]sx",
-    "*-test.[jt]sx",
+    "**/*.test.[jt]sx",
+    "**/*-test.[jt]sx",
     "**/__tests__/*.[jt]sx",
     "**/test.[jt]sx"
 ];
 
 const storybookFiles = [
-    "*.(stories|storybook|story|chroma).[jt]s?(x)"
+    "**/*.(stories|storybook|story|chroma).[jt]s?(x)"
 ];
 
 const mainStorybookFiles = [
@@ -36,8 +36,9 @@ const mainStorybookFiles = [
 
 export default tseslint.config(
     js.configs.recommended,
+    tseslint.configs.recommended,
     {
-        ignores: ["**/dist/*", "node_modules", "pnpm-lock.yaml", "!/.storybook", "!/**/.storybook"]
+        ignores: ["**/dist/*", "node_modules", "**/node_modules", "pnpm-lock.yaml", "**/tokens/**/types/*"]
     },
     {
         files: [...sourceFiles, ...typescriptFiles, ...reactTestFiles, ...storybookFiles, ...mainStorybookFiles],
@@ -62,10 +63,6 @@ export default tseslint.config(
             "@stylistic": stylistic
         },
         rules: {
-            // TypeScript
-            ...tseslint.configs.recommended[0].rules,
-            ...tseslint.configs.recommended[1].rules,
-
             // React
             ...react.configs.recommended.rules,
 
@@ -307,12 +304,19 @@ export default tseslint.config(
                 typescript: {
                 // optionally specify a project or tsconfig path
                     project: ["./tsconfig.json", "./packages/*/tsconfig.json"],
-                    alwaysTryTypes: true // optional
+                    alwaysTryTypes: true, // optional
+                    noWarnOnMultipleProjects: true
                 }
             },
             react: {
                 version: "detect"
             }
+        }
+    },
+    {
+        files: ["**/.storybook/**/*.{js,jsx,ts,tsx}", "**/storybook/**/*.{js,jsx,ts,tsx}"],
+        rules: {
+            "@stylistic/indent": "off"
         }
     }
 );

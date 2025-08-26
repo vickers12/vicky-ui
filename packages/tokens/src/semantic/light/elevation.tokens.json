@@ -2,19 +2,31 @@
     "elevation": {
         "none": {
             "type": "boxShadow",
-            "value": "{shadow.none}"
+            "value": "{shadow.none}",
+            "attributes": {
+                "category": "elevation"
+            }
         },
         "raised": {
             "type": "boxShadow",
-            "value": "{shadow.sm}"
+            "value": "{shadow.sm}",
+            "attributes": {
+                "category": "elevation"
+            }
         },
         "lifted": {
             "type": "boxShadow",
-            "value": "{shadow.md}"
+            "value": "{shadow.md}",
+            "attributes": {
+                "category": "elevation"
+            }
         },
         "floating": {
             "type": "boxShadow",
-            "value": "{shadow.lg}"
+            "value": "{shadow.lg}",
+            "attributes": {
+                "category": "elevation"
+            }
         }
     }
 }
