@@ -1,5 +1,11 @@
 # @vicky-ui/tokens
 
+## 3.0.0
+
+### Major Changes
+
+- d47af45: Updated token transforms and changed how they're used.
+
 ## 2.0.0
 
 ### Major Changes
